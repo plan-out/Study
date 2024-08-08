@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>float예제4</title>
+	<style><!--주석-->
+	.wrap{border:10px  solid  #000;
+		width:600px; margin-bottom:20px;}
+		
+	#a{height:280px;}
+	
+	#a-1{background:#ffc; width:65%;
+		height:280px; float:left;}
+		
+	#a-2, #a-3, #a-4{width:30%;
+		background:#fcc; height:80px;
+		float:right;}
+		
+	#a-3{margin:20px  0;}
+	
+	#b{height:100px;}
+	#b div{width:30%; height:100px;
+		background:#ccf; float:left;}
+	#b #b-2{margin:0  5%;}
+	
+	#c{height:200px;}
+	#c div{width:47.5%; height:200px;
+		background:#ccc;}
+	#c-1{float:left;}
+	#c-2{float:right;}
+	</style>
+</head>
+<body>
+	<div id="a" class="wrap">
+		<div id="a-1">a-1</div>
+		<div id="a-2">a-2</div>
+		<div id="a-3">a-3</div>
+		<div id="a-4">a-4</div>
+	</div>
+	
+	<div id="b" class="wrap">
+		<div id="b-1">b-1</div>
+		<div id="b-2">b-2</div>
+		<div id="b-3">b-3</div>
+	</div>
+	
+	<div id="c" class="wrap">
+		<div id="c-1">c-1</div>
+		<div id="c-2">c-2</div>
+	</div>
+</body>
+</html>

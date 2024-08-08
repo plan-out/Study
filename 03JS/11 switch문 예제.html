@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>11 switch문 예제</title>
+	<script>
+		let day = prompt("요일 \"월,화,수,목,금,토,일\" 중 입력:");
+
+		//day = "수"
+
+		switch(day){
+			case "월":
+			case "화":
+			case "수":
+			case "목":
+			case "금":
+				document.write("<h1>정상영업함!!</h1>");
+				break;
+			case "토":
+			case "일":		
+				document.write("<h1>주말 휴일!!</h1>");
+				break;
+			default:
+				document.write("<h1>잘못된 요일을 입력!!</h1>");	
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

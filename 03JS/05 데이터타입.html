@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>05 데이터타입(p321~325)</title>
+	<script>
+
+		var num = 100; //num이라는 변수가 선언되고, 100값을 저장함.
+		/*
+			var >> [예약어] : 변수를 정의하는 예약어
+			num >> [식별자] : 변수명, 사용자(개발자)가 이름을 주는 것
+			=   >> [연산자] : 연산기호, 우변을 값을 좌변에 넣는 대입연산자
+			100 >> [리터럴] : 데이타 값
+			;		>> [문장기호] : 문장의 마침을 표시
+		*/
+
+		//1.숫자타입(number) : 숫자리터널
+		let a = 123; //정수타입
+		let b = 1.23;	//실수타입
+		let c = 1e+2; //지수타입 = 1x10² = 100
+
+		//2.문자타입(string) : 문자리터널은 ""나 ''로 묶어서 표시한다.
+		let t = "텍스트";
+		console.log(t);
+		console.log(num);
+		console.log('num');
+		console.log('555');
+		console.log("그녀는 \"누구세요\"라고 했습니다.");
+		//텍스트 상태로 ""나 ''를 사용하려면, \를 입력한다.
+
+		//3.논리타입(boolean) : 논리값(true:참, false:거짓)
+		let d = true;
+		console.log(d);
+		console.log(false);
+
+		//4.데이타없음(undefined:정의되지않음, null:비어있음.)
+		var e;
+		console.log(e);//undefined
+
+		var f = null;
+		console.log(f);//null
+
+		//데이타의 타입을 확인하는 명령어 : typeof
+		console.log(typeof(num));
+		console.log(typeof(a));
+		console.log(typeof(b));
+		console.log(typeof(c));
+		console.log(typeof(d));
+		console.log(typeof(e));
+		console.log(typeof(f));
+		console.log(typeof(t));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

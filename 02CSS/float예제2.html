@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>float예제2</title>
+	<style>
+		#wrap{border:10px solid #f00;
+			width:400px; height:500px;
+			background-image:url("../HTML/자몽.jpg");
+			background-position:center center;
+			background-size:cover;}
+		
+		#wrap  div{width:100px; height:100px;
+			float:left;}
+		
+		/*#wrap  .r{float:right;}*/
+		#wrap  #f ~ div{float:right}
+		
+		#d, #f, #h, #j{clear:both;}
+		
+		#a{background:#2c6b3c;}
+		#b{background:#97b8b9;}
+		#c{background:#3a5b5e;}
+		#d{background:#adafda; }
+		#e{background:#efd9e0;}
+		#f{background:#f6eaef;}
+		#g{background:#cce1f8;}
+		#h{background:#8e9d68;}
+		#i{background:#71716e;}
+		#j{background:#8d2d54;}
+		#k{background:#d28271;}
+		#l{background:#eecca5;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="a">a</div>
+		<div id="b">b</div>
+		<div id="c">c</div>
+		<div id="d">d</div>
+		<div id="e">e</div>
+		<div id="f">f</div>
+		<div id="g" class="r">g</div>
+		<div id="h" class="r">h</div>
+		<div id="i" class="r">i</div>
+		<div id="j" class="r">j</div>
+		<div id="k" class="r">k</div>
+		<div id="l" class="r">l</div>		
+	</div>
+</body>
+</html>

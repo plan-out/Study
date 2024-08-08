@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>06대상의 구성방식</title>
+	<style>
+		/*전체선택자 : 모든 요소(태그)에 스타일을 적용*/
+		*{border:1px solid #000;  margin:0;}
+		
+		/*복수대상 : 다수의 대상을 지정*/
+		h3, h4{font-size:30px; background-color:#ffc;}
+		
+		/*위치적 조건부여(조상-자손)*/
+		#wrap  div{border:5px  solid  #f00;  margin:10px;}
+		#wrap  div  p{font-family:"궁서";}
+		
+		/*위치적 조건부여(부모-자식)*/
+		#wrap  > p{font-size:20px;  color:#0f0;}
+		
+		/*바로 다음에 오는 형제요소*/
+		h3 + p{color:#00f; font-weight:bold;}
+		
+		/*뒤에 오는(밑에 있는) 모든 형제요소*/
+		h4 ~ p{color:#0ff; font-style:italic;}
+		
+		/*하나의 대상을 정밀하게 선택*/
+		h1#this.abc.def{font-size:50px; color:gold; background:gray;}
+	</style>
+</head>
+<body>
+	<h1 id="this" class="abc def">대상의 구성방식(p104)</h1>
+	<div id="wrap">
+		<p>: css에서 선택자를 조합하여 대상을 구성하는 다양한 방식</p>
+		<div class="c1">
+			<h3>h3 제목</h3>
+			<p>m1 문단내용_1</p>
+			<p>m1 문단내용_2</p>
+			<p>m1 문단내용_3</p>
+		</div>
+		<div class="c2">
+			<p>m2 문단내용_1</p>
+			<h4>h4제목</h4>
+			<p>m2 문단내용_2</p>
+			<p>m2 문단내용_3</p>
+		</div>
+	</div>
+</body>
+</html>

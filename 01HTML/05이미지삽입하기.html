@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<!--메타태그:문서를 설명하는 내용-->
+		<meta charset="utf-8"><!--문자 인코딩 정보 표기-->
+		<meta name="author" content="김기환"><!--작성자(소유권자)-->
+		<meta name="description" content="이미지태그사용법">
+		<!--문서의 내용을 간략하게 설명-->
+		<meta name="keywords" content="img태그, 이미지태그, 태그학습">
+		<!--검색엔진에 의해 검색되는 키워드들을 나열-->
+		
+		<title>05 이미지삽입하기</title>
+	</head>
+	<body>
+		<p><iframe src="페이지.html" width="600" height="40" frameborder="0"></iframe></p>
+		<h1>이미지태그</h1>
+		<hr size="5" color="blue"/><!--수평선-->
+		<div><!--영역-->
+			<h2>절대경로로 주소지정</h2>
+			<p>최상위폴더(루트)에서부터 위치를 지정해 나아가는 방식</p>
+			<p>
+				<img src="C:\Users\MYCOM\Desktop\김기환(24년10월14일)\HTML\자몽.jpg" 
+				alt="자몽이미지" width="200"/>
+				<img src="C:\Users\MYCOM\Desktop\김기환(24년10월14일)\HTML\이미지\딸기.jfif"
+				alt="딸기이미지" width="200"/>
+				<img alt="다른서버이미지" width="200"
+				src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fhearts-made-from-natural-fruits-by-ai-generated_491781-2195.jpg&type=sc960_832"/>
+			</p>
+		</div>
+		<hr/><!--수평선-->
+		<div>
+			<h2>상대경로로 주소지정</h2>
+			<p>현재 작성문서를 기준으로 위치를 지정해 나아가는 방식</p>
+			<p>
+				<img src="자몽.jpg" alt="자몽이미지" height="150"/>
+				<img src="이미지/딸기.jfif" alt="딸기이미지" height="150"/>
+				<img src="../레몬.png" alt="레몬이미지" height="150"/>
+			</p>
+			<!--
+				../ 한수준 위 폴더 지정
+				../../ 두수준 위 폴더 지정
+			-->
+		</div>
+	</body>
+</html>

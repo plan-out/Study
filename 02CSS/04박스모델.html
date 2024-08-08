@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>04박스모델</title>
+	<!--내부 스타일시트-->
+	<style>
+		div{width:200px; height:100px; font-size:30px;}
+		
+		#aa{background:#fcc; border:10px solid #f00;
+			margin:20px;}
+		#bb{background:#cfc; border:10px solid #0f0;
+			padding:20px; 	/*내부여백*/
+			margin:50px;  		/*외부여백*/
+		}
+		#cc{background:#ccf; border:10px solid #00f;
+			padding:20px  40px  60px  80px;
+		}
+		/*
+			padding과 margin 입력방법
+			padding:값;	- 네 방향 전체에 동일한 값이 적용된다.
+			padding:값1  값2;  - 값1:위아래,  값2:왼쪽오른쪽
+			padding:값1  값2  값3;  - 값1:위,  값2:좌우,  값3:아래 
+			padding:값1  값2  값3  값4;  - 시계방향으로 위, 우, 아래, 좌
+			
+			분할하여 입력 가능
+			padding-top:20px;
+			padding-left:80px;
+			padding-right:40px;
+			padding-bottom:60px;
+		*/
+		img{width:200px; height:100px;}
+		
+		h1{
+			/*속성별로 작성하기*/
+			border-width:10px; 	/*선의 두께*/
+			border-style:solid; 	/*선의 스타일*/
+			border-color:red;		/*선의 색상*/
+			
+			/*축약작성*/
+			border:20px  solid green;
+			
+			/*위치별로 분할 작성*/
+			border-top:10px double blue;
+			
+			/*위치-속성별로 작성하기*/
+			border-left-color:#ff0;
+			border-bottom-width:30px;
+		}
+		
+		p{
+			padding:20px;
+			border:10px solid #000;
+			border-radius:20px;			/*모서리 둥글게*/
+			
+			/*외곽선
+				- 테두리보다 바깥에 생성됨
+				- 크기에 영향을 주지않는다.
+				- 위치별로 분할 할 수 없다.(4방향 전체생성)
+			*/
+			outline:20px solid #0ff;
+		}
+	</style>
+</head>
+<body>
+	<h1>박스모델(p191)</h1>
+	<p>: 모든 태그는 네모난 box의 형태이다.(작은책 p41)</p>
+	<hr/>
+	<div id="aa">box</div>
+	<div id="bb">box</div>
+	<div id="cc"><img src="../레몬.png"/></div>
+</body>
+</html>

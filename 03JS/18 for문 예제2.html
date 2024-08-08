@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>18 for문 예제2</title>
+	<style>
+		table{
+			border-collapse:collapse;
+				/*
+					:separate; (기본값) 분리=테두리가 서로 떨어져있다.
+					:collapse; 상쇄=테두리가 겹쳐있다.
+				*/
+		}
+		td{border:1px solid #000; padding:5px;}
+	</style>	
+	<script>
+		var table = "<table>";
+		
+		for(var a=2; a<=9; a++){
+			table += "<tr>"
+			for(var b=1; b<=9; b++){
+				table += `<td>${a}×${b}=${a*b}</td>`;
+			}
+			table += "</tr>"	
+		}
+
+		table += "</table>"; //"<table>"+.....+"</table>"
+		
+		document.write(table);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

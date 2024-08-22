@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>37 문서객체모델(DOM) -p421</title>
+</head>
+<body bgcolor="#ffc">
+	
+	<script>
+		//document.write("<h1>문서객체모델</h1>");
+
+		var heading = document.createElement("h1");
+		//엘리먼트노드 : html요소(<h1>) 생성
+
+		var text = document.createTextNode("문서객체모델");
+		//텍스트노드 생성
+
+		//생성된 노드들은 메모리에만 존재함
+		//문서에는 구현되지 않았다.
+
+		document.body.appendChild(heading);//body안에 h1요소를 넣음.
+		heading.appendChild(text);//h1요소안에 텍스트 삽입
+		/*
+			부모객체.appendChild(객체);
+				- 부모객체(태그)안에 마지막 자식으로 해당객체가 들어감.
+			부모객체.insertBefore(객체[, 기분자식]);
+				- 마지막 자식이나, 기준자식 앞에 들어감.	
+			부모객체.removeChild(객체);
+				- 해당객체를 부모에게서 제거함.	
+		*/
+
+		var p = document.createElement("p");
+		var img = document.createElement("img");
+
+		document.body.append(p);
+		/*
+			부모객체.append(객체,객체, ....);
+			- 부모객체(태그)안에 인수로 받은 객체들을 순차적으로 생성함.	
+		*/
+		p.appendChild(img);
+
+		//태그의 속성들은 DOM객체의 속성(변수)으로 정의되어 있다.
+		//단, 모든 속성이 정의 되어 있지는 않다.
+
+		img.src = "../레몬.png";
+		img.width = 300;
+		img.height = 300;
+		img.alt = "이미지설명";
+
+		//정의 되지않는 속성을 넣는 경우
+		//반드시 정의되지 않는 속성에만 사용하는 것은 아니다.
+		img.setAttribute("module","picture");
+		img.setAttribute("title","레몬이미지");
+
+		//속성의 제거하는 경우
+		document.body.removeAttribute("bgcolor");
+
+		//속성값을 가져오기
+		var img_w = img.width;
+		var img_h = img.height;
+
+		document.write(`<p>이미지의 너비:${img_w}</p>`);
+		document.write(`<p>이미지의 높이:${img_h}</p>`);
+
+		//속성으로 정의되지않은 속성값 가져오기
+		var img_m = img.getAttribute("module");
+		document.write(`<p>이미지의 모듈:${img_m}</p>`);
+	</script>
+
+</body>
+</html>

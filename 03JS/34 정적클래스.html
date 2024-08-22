@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>34 정적클래스</title>
+	<script>
+		/*
+			정적속성와 정적메소드는 객체생성없이 호출하여 사용할 수 있다.
+		*/
+
+		class Box{
+			//정적속성(변수)
+			static color="노란색";
+			//정적메소드(함수)
+			static text(){
+				console.log(this.color+"상자가 있어요.");
+				//정적메소드는 정적속성만 사용가능
+			}
+		}
+
+		Box.color = "빨간색"; //클래스명.정적속성명
+		Box.text(); //클래스명.정적메소드명()
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

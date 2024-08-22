@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>25 내장함수(p370)</title>
+	<script>
+		/*	
+			내장함수(전역함수) : 이미 시스템에 정의되어 있는 함수
+			사용자정의함수 : 사용자가 직접 정의한 함수
+		*/
+
+		var num = prompt("정수를 입력하세요."); //"5"
+
+		var is = isNaN(num); //인수가 숫자가 아니면, true값을 반환함.
+
+		if(is) document.write(`<p>입력된 값 ${num}은 문자이다.</p>`);
+		else document.write(`<p>입력된 값 ${num}은 숫자이다.</p>`);
+
+		num = parseInt(num); //인수로 받은 값은 정수로 변환하여 반환
+		//parseFloat(인수); 인수로 받은 값은 실수로 변환하여 반환
+
+		function counter(){
+			num++;
+			document.write(num+"초<br/>");
+		}
+
+		//counter();
+		//counter();
+
+		var count = setInterval(counter, 1000);
+		//setInterval(함수,시간); 일정시간(밀리초)마다 함수를 호출함.
+
+		function timer(){
+			document.write("<p>카운터 종료!!</p>");
+			clearInterval(count); //setInterval함수 종료
+		}
+
+		setTimeout(timer,10000);
+		//setTimeout(함수,시간); 지정된 시간에 함수를 단 한번 호출
+		//clearTimeout(); setTimeout을 실행전에 지울 수 있음.
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

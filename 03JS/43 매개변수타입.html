@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>43 매개변수타입</title>
+	<script>
+		var variable_1 = 10; //값
+		var variable_2 = function(){}; //익명함수
+		var variable_3 = { a:10, b:3 }; //객체리터럴
+
+		//함수선언
+		function func_1(ab){ //매개변수ab:하나의 값을 가지는 변수타입
+			console.log("함수1번 실행!!");
+			var value = 100 + ab;//변수를 호출하는 방법으로 호출됨.
+			console.log("함수1번 종료 value:"+value);
+		}
+		
+		//함수호출
+		func_1(22);
+		func_1(5);
+		func_1("문자");
+		func_1(variable_1);
+
+		//함수선언
+		function func_2(ab){ //매개변수ab:함수타입
+			console.log("함수2번 실행!!");
+			ab(); //함수를 호출하는 방법으로 호출됨.
+			console.log("함수2번 종료");
+		}
+
+		var printText = function(){
+			console.log("printText함수실행");
+		}
+
+		func_2(printText);
+		func_2(function(){
+			console.log("익명함수 실행!!!");
+		});
+
+		//함수선언
+		function func_3(ab){//매개변수ab
+			console.log("함수3번 실행!!");
+			var value = ab.a + ab.b + ab.c.num1 + ab.c.num2;//객체로 호출됨, 객체타입
+			console.log("함수3번 종료 value:"+value);
+		}
+
+		var item = {num1:20, num2:11}
+		var box = {a:20, b:3, c:item, z:22, y:20}
+
+		func_3(box);
+		func_3({
+						a:30, 
+						b:13,
+						c:{
+							num1:33,
+							num2:11
+						}
+					});
+				
+		//생성자함수
+		function Swiper(text, option){
+			console.log("대상:"+text);
+			console.log("반복:"+option.loop);
+		}			
+
+
+		var swiper1 = new Swiper(".swiper",{
+			roop:true,
+			slidePerView:1
+		});			
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

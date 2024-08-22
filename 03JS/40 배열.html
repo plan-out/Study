@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>40 배열</title>
+	<script>
+		/*
+			배열
+			:여러개의 원소(값)들을 연속적으로 저장하고,
+			전체를 하나의 단위로 다루는 데이터 구조
+		*/
+
+		//배열만들기
+		let num = [11,22,33,44,55];
+		let week = ["일","월","화","수","목","금","토"];
+
+		//배열호출
+		console.log(num); //배열자체가 호출
+		console.log(num[0]); //배열명[인덱스] = 배열값이 호출
+		console.log(num[1]);
+		console.log(num[2]);
+		console.log(num[3]);
+		console.log(num[4]);
+		//배열의 인덱스는 0부터 시작된다.
+
+		//배열의 값을 추가
+		console.log(num[5]);
+		num[5] = 66;
+		console.log(num[5]);
+
+		//배열의 크기 확인
+		console.log("배열의 크기:" + num.length);
+		
+		//배열값 추가, 크기확인
+		num[9] = 100;
+		console.log(num);
+		console.log("배열의 크기:" + num.length);
+		
+		//배열의 크기조정
+		num.length = 5;
+		console.log(num);
+		console.log("배열의 크기:" + num.length);
+		console.log(num[5]); //undefined
+		console.log(num[9]); //undefined
+
+		let now = new Date(); //객체생성
+		
+		//배열은 객체이다.
+		let arr = new Array(5); //배열이 생성됨. 인수(5)는 배열의 크기를 지정
+		arr[0] = 2;	//정수
+		arr[1] = 1.23;	//실수
+		arr[2] = "문자";	//문자
+		arr[3] = new Date();	//객체
+		arr[4] = function(x,y){ 	//함수
+			return x+y; 
+		};
+
+		console.log(arr);
+	 	var now_year = arr[3].getFullYear();
+		console.log(now_year);
+
+		var sum = arr[4](10,5);
+		console.log(sum);
+
+		var nums = new Array(10,20,30,40,50);
+		console.log(nums);
+
+		console.log(nums.toString());
+		//배열에 있는 모든 값을 연결하여, 하나의 문자열을 만듦.
+ 	</script>
+</head>
+<body>
+	
+</body>
+</html>

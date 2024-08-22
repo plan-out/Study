@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>38 DOM 2번</title>
+</head>
+<body>
+	<script>
+		var div = document.createElement("div");
+		var img = document.createElement("img");
+		var p = document.createElement("p");
+		var text = document.createTextNode("점점 커지는 이미지");
+		var w = 100;
+
+		document.body.appendChild(div);
+		div.appendChild(img);
+		div.appendChild(p);
+		p.appendChild(text);
+
+		img.src = "../HTML/자몽.jpg";
+		img.width = w;
+
+		function motion(){
+			w++; 
+			img.width = w;
+		}
+
+		setInterval(motion, 1000);
+
+		//스타일을 동적으로 부여하기
+		div.style.border = "10px solid #000";
+		div.style.textAlign = "center";
+		// "-" 대신 연결된 단어의 첫글자를 대문자로 작성
+		div.style["color"] = "#f00";
+		div.style["background-color"] = "#cff";
+
+
+
+
+	</script>
+</body>
+</html>

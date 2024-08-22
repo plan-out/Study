@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>28 Date객체</title>
+	<style>
+		html,body{height:100%;}
+		body{display:flex; justify-content:center; align-items:center;
+			background:#fb0; color:#fff;}
+		div{text-align:center;}
+		h1{font-size:50px;}
+		p{font-size:30px; margin-top:20px;}
+	</style>
+	<script>
+		/*
+			자바스크립트 내장객체 
+				참조 : https://developer.mozilla.org/
+						   https://devdocs.io/javascript/	
+		*/
+
+		//date 객체는 날짜와 시간의 정보를 담고, 제어하는 객체
+		let now =	new Date();//현재 날짜와 시간의 정보를 가진 객체 생성됨.
+		console.log(now);
+
+		var output = "<div><h1>";
+	
+		output += now.getFullYear()+"년 ";
+		output += now.getMonth()+1+"월 ";
+		output += now.getDate()+"일";	
+
+		switch(now.getDay()){
+			case 0: output += "(일요일)"; break;
+			case 1: output += "(월요일)"; break;
+			case 2: output += "(화요일)"; break;
+			case 3: output += "(수요일)"; break;
+			case 4: output += "(목요일)"; break;
+			case 5: output += "(금요일)"; break;
+			case 6: output += "(토요일)"; break;
+		}
+
+		output += "</h1><p>"	
+
+		output += now.getHours()+"시 ";
+		output += now.getMinutes()+"분 ";
+		output += now.getSeconds()+"초";
+		
+		output += "</p></div>"	
+
+		document.write(output);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

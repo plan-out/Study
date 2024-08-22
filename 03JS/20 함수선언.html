@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>20 함수선언(p353~356)</title>
+	<script>
+		/*
+			함수:일렬의 처리과정(실행문)을 묶어놓고, 이름을 부여한 것
+				- 필요할 때 호출하여, 사용하기 위함.
+				- 반복하여 사용할 수 있다.
+				- 인수값에 따라 다른 결과물을 만들어 낼 수 있다.
+		*/
+
+		make();
+		//noodle(); 타입예러발생 : 함수표현식보다 먼저 호출될 수 없다.
+		console.log("num:"+num);
+		console.log("noodle:"+noodle);
+		console.log("+++++++++++++++++");
+		
+
+		//함수선언(함수선언식)
+		function make(){
+			console.log("1.종이컵이 나온다.");
+			console.log("2.커피가루가 나온다.");
+			console.log("3.온수가 나온다.");
+			console.log("4.완료불빛이 켜진다.");
+		}
+		
+		//변수선언
+		var num = 5;//표현식(=연산식)
+
+		//함수선언(함수표현식)
+		var noodle = function(){ //익명함수 : 이름이 없는 함수
+			console.log("1.물을 끓인다.");
+			console.log("2.면을 삶는다.");
+			console.log("3.스프를 넣는다.");
+			console.log("4.계란을 넣는다.");
+		}
+
+		//변수호출
+		console.log("num:"+num);
+		//함수호출
+		make();
+		noodle();
+		console.log("==================");
+		make();
+		noodle();
+
+		
+		//자가실행함수(즉시 실행 함수 p356)
+		;(function(){
+			console.log("자가실행함수");
+		})();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

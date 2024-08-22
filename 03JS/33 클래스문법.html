@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>33 클래스문법</title>
+	<script>
+		/*
+			자바,c++,c#의 경우, 클래스기반의 객체지향언어이며,
+			자바스크립트는 프로토타입기반의 객체지향언어이다.
+			프로토타입은 객체의 원형을 뜻한다.
+			프로토타입기반은 클래스가 필요없는 언어이다.
+
+			ES6부터 클래스가 추가됨.
+			클래스 또한 객체를 정의하는 일종의 틀(설계도)이다.
+
+			프로토타입기반은 "상속","캡슐화","다형성"에 취약하다.
+		*/
+
+		//클래스정의
+		class Rectangle{
+			//객체안의 변수(속성)
+			color;	//Public속성:클래스밖에서도 접근가능
+			#width;	//Private속성:클래스밖에서 접근불가능
+			#height;
+			//생성자함수:생략가능
+			constructor(c="없음",w=0,h=0){
+				this.color = c;
+				this.width = w;
+				this.#height = h;
+			}
+			//세터(setter) : 속성에 값을 집어넣는 함수
+			set width(n=0){
+				if(n>=0) this.#width = n;
+				else throw "너비값에는 음수를 넣을 수 없습니다.";//에러를 띄움.
+			}
+			//게터(getter) : 속성값을 내보내는 함수
+			get width(){
+				return this.#width;
+			}
+
+			//객체안의 함수(메소드)
+			#getArea(){//Private메소드 : 객체안에서만 사용가능
+				return this.#width * this.#height;
+			}
+			infoText(){
+				var output = `${this.color}의 사각형-`;
+				output += `너비:${this.#width}, `;
+				output += `높이:${this.#height}, 넓이:`;
+				output += this.#getArea();
+				return output;
+			}
+		}
+
+		var rec1 = new Rectangle();//객체생성 : new 생성자함수();
+		var rec2 = new Rectangle("빨간색",50,40);
+
+		rec1.color = "노란색";
+		//rec1.width = 100; 객체안의 변수가 추가됨.
+		//rec1.#height = 80; 객체안의 변수#height에 접근이 불가능
+		//rec1.#getArea(); 객체안의 함수접근 불가능
+		
+		rec1.width = 100; //세터함수 호출	
+
+		console.log(rec1.width); //게터함수 호출
+
+		console.log(rec1.infoText());
+		console.log(rec2.infoText());
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

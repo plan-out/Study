@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01 태그의 구조(p191)</title>
+	<style>
+		p{width:200px; height:100px; margin:0;}
+		/*
+			width와 height에 의해 크기조절되는 영역은 
+			[contents영역=태그안]이다.
+		*/
+
+		#aa{background:#fcc;}
+		#bb{background:#cfc; border:10px solid #000;
+			padding:20px; margin:40px;}
+		#cc{background:#ccf;
+			/*분할작성*/
+			padding-top:20px;
+			padding-left:40px;
+			padding-right:60px;
+			padding-bottom:80px;
+			/*통합작성*/
+			padding:20px;	/*4방향*/
+			padding:20px 40px; /*위아래 왼쪽오른쪽*/
+			padding:20px 40px 60px; /*위 왼쪽오른쪽 아래*/
+			padding:20px 40px 60px 80px;	/*시계방향*/
+
+			margin-top:60px;
+		} 
+
+		img{width:200px; height:100px;}
+		/*
+			padding영역
+				:내부여백 = 테두리와 컨텐츠영역 사이의 여백
+				:or 영역의 확장
+				:background만 표현됨.
+
+			margin영역
+				:외부여백	= 다른 요소들과의 간격(여백)
+				:or 상대적위치 - 마이너스값이 표현가능하다.
+
+
+			※padding과 margin 표기방식이 같다.
+
+			#bb가 웹브라우져에서 차지하고 있는 크기
+				가로:340px = contents영역(200px)+padding영역(20+20px)
+										+border영역(10+10px)+margin영역(40+40px)
+				세로:240px
+		*/
+	</style>
+</head>
+<body>
+	<h2>01 태그의 구조(박스모델)</h2>
+	<h3>: 모든 태그는 네모난 box의 형태이다.</h3>
+	<hr/>
+	<p id="aa">단락태그</p>
+	<p id="bb">단락태그</p>
+	<p id="cc"><img src="강아지.jpg"/></p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>02 진열방식</title>
+	<style>
+		.tag{border:1px solid #000;
+			width:200px; height:100px;
+			margin:0;}
+
+		.block{display:none;}
+		.inline{display:inline-block;}
+	</style>
+</head>
+<body>
+	<!--블록태그-->
+	<div class="block tag">영역태그</div>
+	<p class="block tag">문단태그</p>
+	<h1 class="block tag">제목태그</h1>
+
+	<!--인라인태그-->
+	<a class="inline tag">링크태그</a><span class="inline tag">인라인영역</span>
+	<em class="inline tag">강조태그</em>
+
+
+
+	<!--
+		[요소의 유형 p29]
+		1.블록요소 : 사이트의 구조를 만들때 사용됨.
+			- div, h1~h6, p, ul, ol, li, dl, dt, dd, hr, form
+				header, main, footer, nav, aside, section, article, address
+			(1)수직정렬 (2)크기조절이 가능함.
+			(3)기본크기 : 너비는 부모의 컨텐츠영역과 같고, 높이는 내용만큼 설정된다.
+
+		2.인라인요소 : 텍스트나 내용을 감싸는 태그
+			- a, span, strong, em, (i, b, small, del, ins, sup, sub, mark)
+			(1)수평정렬 (2)크기조절이 불가능함. 
+			(3)기본크기 : 너비는 내용만큼, 높이는 글자크기만큼 설정된다.
+			(4)공백(띄어쓰기)을 인식함.
+			(5)블록요소를 감쌀 수 없다.(블록요소의 부모(조상)요소가 될 수 없다.)
+
+		3.인라인-블록 요소 : 컨텐츠 해당되는 태그(텍스트와 같다.)
+			- img, iframe, video, audio, input, 그외 폼태그
+			(1)수평정렬 (2)크기조절이 가능함
+			(3)기본크기 : 너비와 높이 둘다 내용만큼, 높이는 최소 line-height만큼은
+									 설정된다.
+			(4)공백(띄어쓰기)을 인식함. (5)블록요소를 감쌀 수 있다.
+
+	-->	
+</body>
+</html>

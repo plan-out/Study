@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>04 float영역 인식하기</title>
+	<style>
+		#a, #b, #c{
+			width:100px; height:100px; background:#ccc;
+			border:1px solid #f00; float:left;
+		}
+
+		#parent{
+			border:10px solid #000; background:#ffc;
+			clear:both; /*선행되는 float요소가 있는 경우 사용*/
+			height:80px; /*감싸는 요소가 float요소인 경우 사용*/
+		}
+
+		#parent div{width:80px; height:80px;
+			float:left;}
+
+		.child:nth-child(1){background:#f00;}
+		.child:nth-child(2){background:#0f0;}
+		.child:nth-child(3){background:#00f;}
+	</style>
+</head>
+<body>
+	<div id="a"></div>
+	<div id="b"></div>
+	<div id="c"></div>
+
+	<div id="parent">
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+	</div>
+</body>
+</html>

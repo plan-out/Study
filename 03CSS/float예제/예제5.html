@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>예제5</title>
+	<style>
+		*{margin:0; padding:0;}
+
+		body{background:url("예제5.png") no-repeat;}
+
+		#wrap{border:10px solid #ff0; background:#ffc;
+			width:800px; height:400px; margin:50px;}
+			
+		#wrap div{width:300px; height:300px; 
+			margin:40px;}	
+
+		#left-box{border:10px solid #00f; 
+			background:#aaf; float:left;}
+		#right-box{border:10px solid #f00; 
+			background:#faa; float:right;}
+
+		p{width:100px; height:100px;}	
+
+		#left-box p{float:left;}
+		#right-box p{float:right;}
+
+		#left-box p:nth-child(5),
+		#right-box p:nth-child(2),
+		#right-box p:nth-child(3){clear:both;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="left-box">
+			<p style="background:#f00"></p>
+			<p style="background:#f22"></p>
+			<p style="background:#f44"></p>
+			<p style="background:#f66"></p>
+			<p style="background:#f88"></p>
+		</div>
+		<div id="right-box">
+			<p style="background:#00f;"></p>
+			<p style="background:#22f;"></p>
+			<p style="background:#44f;"></p>
+			<p style="background:#66f;"></p>
+			<p style="background:#88f;"></p>
+		</div>		
+	</div>
+</body>
+</html>

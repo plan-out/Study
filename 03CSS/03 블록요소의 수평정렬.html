@@ -5,19 +5,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>03 블록요소의 수평정렬</title>
 	<style>
+		div{border:10px solid #f00;}
 		p{width:100px; height:100px;
 			border:5px solid #000; background:#ccc;
 			font-size:30px; font-weight:bold;
 			text-transform:uppercase;
 			margin:0;}
 
-		#wrap1{text-align:right;}
-		#wrap1 p{display:inline;}
+		div p:first-child{background:#fcc;}
+		div p:last-child{background:#ccf;}
 
-		#wrap2{text-align:center;}
+		#wrap1{text-align:center;}
+		#wrap1 p{display:inline;}	
+
+		#wrap2{text-align:right;}
 		#wrap2 p{display:inline-block;}
 
-		#wrap3 p{float:right;}
+		#wrap3{height:220px;}
+		#wrap3 p:nth-child(1){float:left;}
+		#wrap3 p:nth-child(2){float:left;}
+		#wrap3 p:nth-child(3){float:left; clear:both;}
+		#wrap3 p:nth-child(4){float:left;}
 	</style>
 </head>
 <body>
@@ -28,7 +36,7 @@
 	</div>
 	<hr/>
 	<div id="wrap2">
-		<p>e</p><p>f</p><p>g</p><p>h</p>
+		<p>e</p><p>f</p><br/><p>g</p><p>h</p>
 	</div>
 	<hr/>
 	<div id="wrap3">

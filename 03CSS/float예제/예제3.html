@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>예제3</title>
+	<style>
+		*{margin:0; padding:0;}
+
+		body{background:url("예제3.png") no-repeat;}
+
+		div{margin:50px; border:10px solid #000;
+			width:400px; height:500px;}
+		
+		p{width:100px; height:100px;}
+
+		.left{float:left;}
+		.right{float:right;}
+
+		p:nth-child(1){background:#f00;}
+		p:nth-child(2){background:#f22;}
+		p:nth-child(3){background:#f44;}
+		p:nth-child(4){background:#f66; clear:both;}
+		p:nth-child(5){background:#f88;}
+		p:nth-child(6){background:#faa; clear:both;}
+		p:nth-child(7){background:#aaf;}
+		p:nth-child(8){background:#88f; clear:both;}
+		p:nth-child(9){background:#66f;}
+		p:nth-child(10){background:#44f; clear:both;}
+		p:nth-child(11){background:#22f;}
+		p:nth-child(12){background:#00f;}
+
+	</style>
+</head>
+<body>
+	<div>
+		<p class="left"></p>
+		<p class="left"></p>
+		<p class="left"></p>
+		<p class="left"></p>
+		<p class="left"></p>
+		<p class="left"></p>
+		<p class="right"></p>
+		<p class="right"></p>
+		<p class="right"></p>
+		<p class="right"></p>
+		<p class="right"></p>
+		<p class="right"></p>
+	</div>
+</body>
+</html>

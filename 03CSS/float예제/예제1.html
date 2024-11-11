@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>예제1</title>
+	<style>
+		*{margin:0; padding:0;}
+
+		body{background:url("예제1.png") no-repeat;}
+
+		.box1{width:600px; border:10px solid #000;
+			margin-top:60px; margin-left:50px;
+			text-align:center; font-size:0;}
+
+		.box1 p{width:100px; height:100px; display:inline-block;}
+		.box1 p:nth-child(1){background:#f00;}
+		.box1 p:nth-child(2){background:#0f0;}
+		.box1 p:nth-child(3){background:#00f;}
+
+		.box2{width:600px; border:10px solid #000;
+			margin-top:60px; margin-left:50px; height:100px;}
+			
+		.box2 p{width:100px; height:100px;}
+		.box2 p:nth-child(1){background:#F0F; float:left;}
+		.box2 p:nth-child(2){background:#00F; float:left;}
+		.box2 p:nth-child(3){background:#999; float:right;}
+		.box2 p:nth-child(4){background:#ff0; float:right;}
+			
+			</style>
+</head>
+<body>
+	<div class="box1">
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+
+	<div class="box2">
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+</body>
+</html>

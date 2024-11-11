@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>예제4</title>
+	<style>
+		*{margin:0; padding:0;}
+
+		body{background:url("예제4.png") no-repeat;}
+
+		div{margin:50px; border:10px solid #000; 
+			float:left;}
+
+		p{width:100px; height:100px; float:left;
+			margin-right:10px;}
+
+		.red{background:red;}
+		.yellow{background:yellow;}
+
+		.first{clear:both;}
+		.last{margin-right:0;}
+
+		.m20{margin-top:20px;}
+		.m40{margin-top:40px;}
+		.m60{margin-top:60px;}
+	</style>
+</head>
+<body> 
+	<div>
+		<p class="red"></p>
+		<p class="red m20"></p>
+		<p class="red m40"></p>
+		<p class="red m60"></p>
+		<p class="red m40"></p>
+		<p class="red m20"></p>
+		<p class="red last"></p>
+		
+		<p class="yellow first m60"></p>
+		<p class="yellow m40"></p>
+		<p class="yellow m20"></p>
+		<p class="yellow"></p>
+		<p class="yellow m20"></p>
+		<p class="yellow m40"></p>
+		<p class="yellow last m60"></p>
+	</div>
+</body>
+</html>

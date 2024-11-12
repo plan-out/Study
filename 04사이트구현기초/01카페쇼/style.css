@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*리셋코드 : 태그가 가지는 기본값을 0 또는 none으로 설정*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img, iframe{vertical-align:top;}
+
+
+header{width:1200px; margin:0 auto; height:190px;
+	border-top:3px solid #da1f3d;}
+header .top{background:#f0f0f0; height:45px;}
+header #sns_menu{float:left; font-size:0;}
+header #sns_menu li{display:inline-block;}
+header #top_menu{float:right; font-size:0;}
+header #top_menu li{display:inline-block;}
+header #logo{clear:both; float:left; margin-top:65px;}
+header #banner{float:right; margin:10px 0 14px;}
+header #main_menu{float:right; font-size:0;}
+header #main_menu li{display:inline-block;}
+
+
+main{width:1200px; height:3000px; margin:20px auto 0;
+	border:10px solid #000;}
+main > section{outline:2px solid #f00;}
+/*
+	border:테두리, 크기에 영향을 줌. 분할해서 줄 수 있다.
+	outline:외곽선, 크기에 영향을 주지않음. 다른 요소와 겹칠 수 있다.
+					분할하여 줄 수 없다.
+*/
+#main_view{margin-bottom:60px;}
+
+#notice{float:left; margin-left:24px;}
+#notice h2{margin-bottom:20px;}
+
+#movie{float:left; margin-left:24px;}
+#movie h2{margin-bottom:20px;}
+
+#info{float:left; padding-top:68px; margin-left:24px;}
+
+
+
+
+
+footer{border:3px solid #000; display:none;}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>11 트랜스폼</title>
+	<style>
+		section{width:300px; height:300px; margin:50px;
+			border:10px solid #000;}
+		
+		.this{width:140px; height:60px; font-size:20px;
+			line-height:60px; font-weight:bold; color:#fff;
+			background:#f00; text-align:center;
+			transition:all .5s;}
+	</style>
+</head>
+
+<body>
+	<h1>변형(transform)</h1>
+	<p>:요소의 이동, 크기조절, 회전, 기울리기 등의 변형효과 부여</p>
+	<hr>
+	<section id="box1">
+		<div class="this">이동</div>
+	</section>
+	<style>
+		#box1:hover .this{
+			transform:translate(100%,100%);}
+		/*
+			[이동]
+			:translate(수평이동값,수직이동값);
+			:translateX(값); - 수평이동
+			:translateY(값); - 수직이동
+			※비율값(단위:%)을 입력시, 자기자신의 
+			크기를 기준으로 한다.
+			(보통의 경우, 부모의 크기나, 상위포지션의 크기를
+			기준으로 한다.)
+		*/	
+	</style>
+
+	<section id="box2">
+		<div class="this">크기조절</div>
+	</section>
+	<style>
+		#box2:hover .this{
+			transform:scale(1.5,3);}
+		/*
+			[크기조절]
+			:scale(너비비, 높이비);
+			:scaleX(값); - 너비크기조절
+			:scaleY(값); - 높이크기조절
+		*/	
+	</style>
+
+	<section id="box3">
+		<div class="this">2차원 회전</div>
+	</section>
+	<style>
+		#box3:hover .this{
+			transform:rotate(120deg);}
+		/*
+			[회전]
+			:rotate(각도);
+		*/
+	</style>
+
+	<section id="box4">
+		<div class="this">기울리기</div>
+	</section>
+	<style>
+		#box4:hover .this{
+			transform:skewX(45deg);}
+		/*
+			[기울리기]
+			:skew(각도1,각도2); 
+				- 각도1 : 수평축 기울리기
+				- 각도2 : 수직축 기울리기
+			:skewX(각도); - 수평축기울리기
+			:skewY(각도); - 수직축기울리기
+		*/	
+	</style>
+
+	<section id="box5">
+		<div class="this">다중변형</div>
+	</section>
+	<style>
+		#box5:hover .this{
+			transform:rotate(90deg) scaleX(2);}
+		/*
+			- 속성값을 여러개 설정하여, 다중변형 가능
+			- 작성순서에 따라, 변형이 적용된다.
+			- 뒤에서부터 선행되어 적용된다.
+		*/
+	</style>
+
+	<section id="box6">
+		<div class="this">기점변경</div>
+	</section>
+	<style>
+		/*변형의 기점(기준)을 변경*/
+		#box6 .this{transform-origin:left bottom;}
+		#box6:hover .this{
+			transform:rotate(90deg);}
+	</style>
+
+	<section id="box7">
+		<div class="this">3차원 회전</div>
+	</section>
+	<style>
+		#box7:hover .this{
+			transform:rotateX(180deg);}			
+		/*
+			[3차원 회전]
+			:rotateX(각도); - X축 3차원회전
+			:rotateY(각도); - Y축 3차원회전
+			:rotateZ(각도); - Z축 3차원회전
+			:rotate3d(X각도,Y각도,Z각도)
+		*/
+	</style>
+
+	<section id="box8">
+		<div class="this">원근</div>
+	</section>
+	<style>
+		#box8{perspective:300px;}
+		/*perspective:원근효과 : 시점의 거리
+			(부모요소에게 작성)*/
+		#box8:hover .this{
+			transform:rotateX(120deg);}			
+
+	</style>
+</body>
+</html>

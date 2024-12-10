@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>10 트랜지션</title>
+	<style>
+		#this{
+			width:100px; height:100px;
+			background:red;
+			transition-property:all; 					/*전환속성(all:모든속성)*/
+			transition-duration:2s;						/*전환시간*/
+			transition-timing-function:ease;	/*전환속도*/
+			/* arof.kr/속도비교.html */
+			transition-delay:1s;							/*대기시간*/
+		}
+		#this:hover{
+			width:200px; height:200px;
+			background:yellow;
+			transition-delay:0s;				
+		}
+		#c{width:100px; height:100px; 
+			background:rgb(128, 208, 240);
+			/*축약 transition:전환속성 전환시간 [속도] [대기시간]*/
+			transition:all 2s ease 0s;
+		}
+
+		#this:hover #c{
+			width:200px; height:200px;
+			background:rgb(205, 255, 208);
+			transition-delay:1s;				
+		}
+	</style>
+</head>
+<body>
+	<h1>트랜지션효과(전환효과)_p221</h1>
+	<p>:CSS 동적표현 효과, 기존 스타일에서 다른 스타일로
+		부드럽게 전환시키는 효과</p>
+	<div id="this">
+		<div id="c"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>12 필터효과</title>
+</head>
+<body>
+	<h2>이미지에 필터효과</h2>
+	<div id="box1"><img src="고양이.png"></div>
+	<style>
+		#box1 img{
+			width:500px;
+			filter:sepia(1);}
+			/*
+				filter:blur(); 흐림효과
+				filter:brightness(); 밝기조절
+				filter:contrast(); 대비값 조절
+				filter:drop-shadow(); 그림자
+				filter:grayscale(); 흑백효과
+				filter:hue-rotate(각도); 색상변화
+				filter:invert(); 색상반전
+				filter:opacity(); 투명도 조절
+				filter:saturate(); 채도
+				filter:sepia(); 세피아설정
+			*/				
+	</style>
+	<hr>
+
+	<h2>요소 뒤 영역에 필터효과</h2>
+	<div id="box2">
+		<img src="고양이.png">
+		<div id="this"></div>
+	</div>
+	<style>
+		#box2{position:relative; width:500px;}
+		#box2 img{width:500px;}
+		#box2 #this{
+			position:absolute;
+			top:0%; left:50%;
+			transform:translate(-50%,-50%);
+			width:300px; height:120px;
+			border:5px solid #000;
+			backdrop-filter:blur(10px) brightness(1.2);
+		}
+	</style>
+</body>	
+</html>

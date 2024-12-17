@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>14 flex학습하기(p279 - p300)</title>
+	<!--
+		참고 : 일분코딩 flex (https://studiomeal.com/archives/197)
+	-->
+	<style>
+		#container{border:10px solid #000; background:#ffc;
+			width:70%; }
+		.item{border:2px solid #f00; background:#cff;
+			width:100px; height:100px; font-size:30px;}
+	</style>
+</head>
+<body>
+	<section id="container" >
+		<div class="item">1번</div>
+		<div class="item" style="transform:scale(1.8);">2번</div>
+		<div class="item" style="order:-1; z-index:1;">3번</div>
+		<!--
+			order스타일 : 나열순서를 지정할 수 있다. (기본값:0)
+			z-index스타일 : 겹쳐진 순서를 지정할 수 있다.
+		-->
+		<div class="item">4번</div>
+	</section>
+	<section style="display:inline-block; padding:10px; background:#fcf">
+		인라인-블록 요소
+	</section>
+	<style>
+		#container{
+			height:300px;
+			display:flex; 
+			/*
+				flex 와 inline-flex는 내부 요소들을 flex화 시킨다.(차이가 없다.)
+				- flex는 컨테이너의 특성이 block과 동일하고,
+					inline-flex는 컨테이너의 특성이 inline-block과 동일하다.
+			*/
+			flex-direction:row;
+			/*
+				요소가 나열되는 메인축의 방향을 설정
+				[row(좌→우), row-reverse(우→좌), 
+					column(위→아래), column-reverse(아래→위)]
+			*/
+			flex-wrap:wrap;
+			/*넘치는 경우, 처리방식*/
+
+			/*
+				flex-flow:[flex-direction] [flex-wrap];
+				: 두개의 값을 한번에 설정
+			*/
+
+			justify-content:center;
+			/*메인축기준 요소 정렬*/
+			align-items:center;
+			/*(한줄일 경우)교차축기준 요소 정렬*/
+			align-content:center;
+			/*(두줄이상일 경우)교차축기준 요소 정렬*/
+			gap:10px 20px;
+			/*요소들간의 간격*/
+		}
+
+		.item{
+			flex-shrink:0; /*축소 비율*/
+		}
+	</style>
+</body>
+</html>

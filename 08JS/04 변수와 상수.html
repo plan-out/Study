@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>04 변수와 상수(p318-320)</title>
+	<script>
+		/*
+			var : 변수를 선언하는 예약어
+			let : 변수를 선언하는 또 다른 예약어
+		*/
+
+		var aa = 10; //변수aa를 선언함.
+		let bb = 20; //변수bb를 선언함.
+
+		console.log("변수aa");
+		console.log(aa);
+		
+		aa = 30; //값변경
+		console.log(aa);		
+
+		var aa = 40; //변수aa를 "또" 선언함.(할 필요가 없다.)
+		console.log(aa);
+
+		console.log("변수bb");
+		console.log(bb);
+		
+		bb = 22; //값변경
+		console.log(bb);
+		
+		//let bb = 33; //선언된 변수를 재선언할 수 없다.
+
+		cc = 100;	//예약어 없이 변수 생성이 가능하다. (되도록 사용X)
+		console.log(cc);
+
+		/*
+			상수(constant) : 저장된 값이 변화하지 않는 수
+			※상수의 이름은 주로 대문자로만 작성한다.
+		*/
+
+		const NUM = 5;	//상수NUM 선언후 값5를 저장함.
+
+		console.log("상수NUM");
+		console.log(NUM);
+
+		//NUM = 10; 값을 변경할 수 없다.
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

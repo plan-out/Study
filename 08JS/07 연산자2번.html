@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>07 연산자2번(p333-339)</title>
+	<script>
+		let a = 10;
+		let b = 5;
+		/*비교연산자(==,>,>=,<,<=,!=,===,!==)
+			:좌변과 우변의 값을 비교하여, 결과를 논리값으로 추출
+			[true]:참 = 식이 성립되는 경우
+			[false]:거짓 = 식이 성립되지 않는 경우				*/
+		console.log("[비교연산자]");
+		console.log(a==b); //a와 b의 값이 같다. : false	
+		console.log(a!=b); //a와 b의 값이 같지않다. : true
+		console.log(a>b); //좌변의 값이 크다.	: true
+		console.log(a>=b);	//좌변의 값이 크거나 같다. : true
+		let c = 10;
+		console.log(a<c);	//좌변의 값이 작다.	: false
+		console.log(a<=c);	//좌변의 값이 작거나 같다. : true
+
+		//값과 타입 모두 검증하는 경우
+		let d = "5";
+		console.log("변수b:"+typeof(b));
+		console.log("변수d:"+typeof(d));
+
+		console.log(b==d);	//값이 같다. : true
+		console.log(b!=d);	//값이 같지 않다. : false
+
+		console.log(b===d);	//값과 타입이 같다.  : false
+		console.log(b!==d);	//값과 타입이 같지 않다. : true
+
+		/*논리연산자(&&,||,!)
+			: 두 개의 논리값을 연산하여 하나의 논리값을 추출*/
+
+		//AND연산자(&&):좌변과 우변이 모두 true인 경우, true출력
+		console.log("[AND연산자]");	
+		console.log(true&&true); //true
+		console.log(true&&false); //false
+		console.log(false&&true); //false
+		console.log(false&&false); //false
+
+		//OR연산자(||):좌변과 우변 중, 단 하나라도 true인 경우, true출력
+		console.log("[OR연산자]");
+		console.log(true||true); //true
+		console.log(true||false); //true
+		console.log(false||true); //true
+		console.log(false||false); //false	
+
+		//주로, 비교연산자와 조합
+		console.log((a>9)&&(b==5)); //true
+		console.log((b!=5)&&(a>b)||(a==c)); //true
+
+		//NOT - 논리부정연산자(!) : 논리값을 부정함(반전함)
+		console.log(!true); //false
+		console.log(!(b==10)); //true
+
+		/*조건연산자(?:) = 삼항연산자
+			:(조건)?참값:거짓값;*/
+
+		let fruit = (true)?"딸기":"사과";
+		console.log(fruit);
+
+		let number = prompt("숫자를 입력하세요.");
+
+		document.write(`<h1>입력한 수 ${number}는 `);
+		document.write(((number%2)==0)?"짝수입니다.":"홀수입니다."+"</h1>");
+
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

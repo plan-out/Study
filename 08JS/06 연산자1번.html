@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>06 연산자1번(p326-332)</title>
+	<script>
+		/*
+			연산 : 식을 계산하여, 결과를 얻는 과정
+			연산자(연산기호) : 식에서 좌변과 우변을 연산하여 하나의 값을 도출함.
+			※연산식=표현식
+		*/
+
+		/*변수선언*/
+		var a = 10;
+		// var	→ 예약어
+		// a		→ 식별자:변수명과 같이, 사용자(개발자)가 이름을 부여하는 것
+		// =		→ 연산자
+		// 10 	→ 리터럴:값
+		// ;		→ 문장기호
+
+		let b=5, c=3, d=2;
+
+		/*산술연산자(+,-,*,/,%)*/
+		console.log("[산술연산자]");
+		console.log(a+b);	//15
+		console.log(a-b);	//5
+		console.log(b*9);	//45
+		console.log(100/b);	//20
+		console.log(a%c);	//1 (나머지연산자)
+
+		console.log("[연산의 우선순위]");
+		console.log(a+b*c);	//25
+		console.log((a+b)*c); //45
+		console.log(((a+b)+c)*d);	//36
+		//※소괄호만 사용하여 연산의 우선순위를 정함.
+
+		/*문자연결연산자(+)
+			: 좌변과 우변을 연결하여 하나의 문자열을 만듦.*/
+		console.log("[문자연결연산자]");
+		console.log(100+a);	//110 - 산술연산자
+		//좌변과 우변 모두 숫자인 경우, 산술연산자가 사용
+		console.log("파란"+'하늘');	//"파란하늘"
+		console.log("변수a:"+a);	//"변수a:10"
+
+		console.log("식b+c="+b+c); //"식b+c=53"
+		console.log("식b+c="+(b+c)); //"식b+c=8"
+
+		console.log("변수b:"+b+", 변수c:"+c+", 변수d:"+d); 
+		//"변수b:5, 변수c:3, 변수:d:2"
+
+		/*템플릿문자열:백틱(``)을 사용히여 문자열을 만든다.*/
+		console.log(`[템플릿문자열]`);
+		console.log(`변수b:${b}, 변수c:${c}, 변수:d:${d}`);
+
+		/*대입연산자(=,+=,-=,*=,/=,%=) -p330**/
+		console.log("[대입연산자]");
+		var num = 10;
+		//우변의 값(10)을 좌변(변수num)에 대입한다.(넣는다.)
+		console.log("1.num의 값은:"+num); //10
+
+		num = num + 1; 
+		console.log("2.num의 값은:"+num);	//11
+
+		num += 1;	//현재 num의 값에 1을 더한다.
+		console.log("3.num의 값은:"+num); //12
+
+		num *= 3;	//현재 num의 값에 3을 곱한다.
+		console.log("4.num의 값은:"+num); //36
+
+		num /= 4;	//9
+		num -= 1;	//8
+		num %= 3;	//2
+		console.log("5.num의 값은:"+num);
+
+		/*증가연산자(++), 감소연산자(--) p327*/
+		console.log("[증가/감소연산자]");
+		console.log(`(변경전) b:${b}, c:${c}`); //"(변경전) b:5, c:3"
+		b++;	//b값을 1증가 시킴
+		c--; 	//c값을 1감소 시킴
+		console.log(`(변경후) b:${b}, c:${c}`); //"(변경후) b:6, c:2"
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

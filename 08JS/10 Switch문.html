@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>10 Switch문(p343-344)</title>
+	<script>
+		
+		var btn1 = 0;
+
+		switch(btn1){
+			case 1: console.log("전등-1");
+			case 2: console.log("전등-2");
+			case 5: console.log("전등-5");
+			case 3: console.log("전등-3");
+			case 4: console.log("전등-4");
+			default: console.log("일치하는 값이 없는 경우!!"); //맨마지막에 작성
+		} 
+
+		console.log("=================");
+
+		let btn2 = 4;
+
+		switch(btn2){
+			case 1:
+				console.log("1.실행문");
+				break;
+			case 2:
+				console.log("2.실행문");
+				break;
+			case 3:
+				console.log("3.실행문");
+				break;
+			case 4:
+				console.log("4.실행문");
+				console.log("안녕하세요.");
+				break;
+				console.log("break문 다음에 작성!!"); //실행되지않음.
+			case 5:
+				console.log("5.실행문");
+				break;
+			default:
+				console.log("일치하는 case가 없음!!");
+		}
+
+		console.log("switch문 밖!!!");
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

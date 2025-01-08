@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>09 조건문 예시</title>
+	<script>
+		var age = prompt("나이를 입력하세요.");
+		var num = false;
+
+		if(age == ""){
+			document.write("<p>나이를 입력하지 않았습니다.</p>");
+		}else if(isNaN(age)){
+			document.write("<p>입력한 값이 숫자가 아닙니다.</p>");
+		}else{	
+			document.write(`<p>입력한 나이는 ${age}세 입니다.</p>`);
+			num = true;
+		}
+		/*
+			isNaN(값) 
+			:입력한 값이 숫자가 아니면 true, 숫자이면 false	출력*/
+
+		var state = null;
+		var price = null; //빈값	
+
+		
+		if(age <= 12){
+			state = "어린이";
+			price = 750;
+		}else if(age < 20){
+			state = "청소년";
+			price = 1200;
+		}else{
+			state = "성인";
+			price = 1500;
+		}	
+		
+		if(num) document.write(`<p>${state} 요금은 ${price}원 입니다.</p>`);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

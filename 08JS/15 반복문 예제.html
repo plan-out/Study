@@ -7,10 +7,39 @@
 	<script>
 		var i = 0;
 
-		while(){
+		while(i<5){
 			console.log("반복문실행_"+i);
+			i++; 
 		}
 
+		/*1~100까지의 합*/
+		let num = 1;
+		let total = 0;
+
+		while(num<=100){
+			total += num; //0+1+2+3+4+5+....+98+99+100
+			num++;
+		}
+
+		console.log("1~100까지의 합 : "+total);
+
+		/*1~100까지의 짝수합*/
+		num = 0; total = 0;
+
+		while(num<=100){
+			total += num;
+			num += 2;//2씩 증가함.
+		}
+		console.log("1~100까지의 짝수합 : "+total);
+
+		/*1~100까지의 홀수합*/
+		num = 0; total = 0;
+
+		while(num<=100){
+			if((num%2)==1) total += num;
+			num ++;
+		}
+		console.log("1~100까지의 홀수합 : "+total);
 	</script>
 </head>
 <body>

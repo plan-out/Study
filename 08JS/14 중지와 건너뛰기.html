@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>14 중지와 건너뛰기</title>
+	<script>
+		/*
+			break; 중지(p350) : 블록(중괄호) 밖으로 나감.
+			continue; 건너뛰기(p351) : 블록(중괄호) 위로 돌아감.
+		*/
+
+		var i = 0;
+
+		while(i<10){
+			i++; //변화식(증가식)은 continue보다 위에 있어야함.
+			if(i==4) continue; //건너뛰고 돌아감.
+			if(i==7) break; //반복이 종료됨.
+			document.write(`반복문 ${i}번째 실행!!<br>`);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

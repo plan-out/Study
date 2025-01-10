@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>13 반복문(while)_p345</title>
+	<script>
+		/*반복문(while) : 실행문들을 반복하여 실행함.*/
+
+		var a = 0;
+
+		console.log("실행문1");
+		if(false) console.log("실행문2_조건문"); //조건문
+		while(a<=3) console.log("실행문3_반복문_"+(a++)); //반복문
+		//반복문을 만들 때에는 "무한반복"이 되지 않도록 구현한다.
+
+		let i = 10; //변수선언
+
+		while(i<10){	//반복조건 : 반복을 시작할 때마다 매번 검증한다.
+			console.log("반복문 실행--"+i);
+			i++; //반복할 때마다, 1씩 증가함.
+		}
+
+		/*do while문 - p346*/
+		let b = 10;
+		do{
+			console.log("do while문 반복 b:"+b);
+			b++;
+		}while(b<10); //반복조건 : 반복내용이 끝날 때마다 검증한다.
+		//반드시 한번은 실행함.
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

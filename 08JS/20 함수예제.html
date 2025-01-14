@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>20 함수예제</title>
+	<style>
+		a{display:inline-block; width:150px; height:50px;
+			text-align:center; line-height:50px;
+			background:#F2AE66; border:5px outset #F2AE66;
+			font-size:24px; }
+		p{font-size:24px;}
+	</style>
+</head>
+<body>
+	<a href="javascript:machine(1);">커피</a>
+	<a href="javascript:machine(2);">녹차</a>
+	<a href="javascript:machine(3);">코코아</a>
+
+	<script>
+		function machine(btn){
+			var menu;
+
+			switch(btn){
+				case 1: menu = "커피"; break;
+				case 2: menu = "녹차"; break;
+				case 3: menu = "코코아"; break;
+				default:
+					document.write("<p>잘못된 값을 입력하였습니다.</p>");	
+					return 0; //함수의 종료
+			}
+			document.write("<p>따뜻한 "+menu+"가 준비되었습니다.</p>");
+		}
+
+	</script>
+</body>
+</html>

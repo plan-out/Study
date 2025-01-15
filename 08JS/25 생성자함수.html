@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>25 생성자함수(p375)</title>
+	<script>
+		/*
+			생성자함수 : 객체를 생성하는 함수
+			- 동일한 속성과 메서드를 가진 객체를 여러개 생성이 가능하다.
+			- 일반함수와 차이를 두기위해, 생성자함수의 이름은 대문자로 시작한다.
+		*/
+
+		//생성자함수 선언
+		function Dog(n="미정",a=0,c="미확인"){
+			//변수(속성)
+			this.name = n;
+			this.age = a;
+			this.color = c;
+			//함수(메서드)
+			this.run = function(){
+				console.log(`${this.name}가 ${this.color}털을 휘날리며, 뛴다.`);
+			}
+			//this:함수를 통해 생성되는 객체를 의미 
+		}
+
+		//생성자함수를 통해 객체생성
+		var d1 = new Dog();
+		var d2 = new Dog("누렁이",1,"갈색");
+
+		d1.name = "흰둥이";
+		d1.age = 2;
+		d1.color = "흰색";
+
+		console.log("강아지1의 이름:"+d1.name);
+		console.log("강아지1의 나이:"+d1.age);
+		console.log("강아지1의 색상:"+d1.color);		
+		d1.run();
+		console.log("강아지2의 이름:"+d2.name);
+		console.log("강아지2의 나이:"+d2.age);
+		console.log("강아지2의 색상:"+d2.color);
+		d2.run();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>23 변수의 사용범위(p363)</title>
+	<script>
+		/*
+			변수는 선언되 위치에 따라 다른 범위을 갖는다.
+			[전역변수]:함수밖에서 선언된 변수, 어디서든 호출하여 사용가능하다.
+			[지역변수]:함수안에서 선언된 변수, 해당 함수안에서만 사용가능하다.
+			[블록변수]:블록내에서만 사용가능한 변수, let으로 선언된 변수만 해당됨.
+
+			※"상수"도 let과 같이 함수안에서 선언된 경우, 함수내에서만 사용가능하고,
+			블록안에서 선언된 경우, 블록안에서만 사용되어짐.
+			(보통의 경우, 블록밖에서 선언되어 전역의 범위를 가짐.)
+		*/
+		var n1 = 10; //전역변수
+		let n2 = 20; //전역변수
+		var n4 = 50; //전역변수
+		let n5 = 60; //전역변수
+		const NUM = 100; //상수
+
+		function field(a=30){//a는 매개변수(지역변수)
+			var n3 = 40; //지역변수
+			var n4 = 55; //지역변수(전역변수와 동일한 이름을 가진 변수)
+			n6 = 70; //예약어 없이 변수선언시, 전역변수로 선언됨.
+			console.log("<<<<함수안 변수호출>>>>");
+			console.log("_변수n3:"+n3);
+			console.log("_매개변수a:"+a);
+			console.log("_변수n1:"+n1);
+			console.log("_변수n2:"+n2);
+			console.log("_상수NUM:"+NUM);
+			console.log("_지역변수n4:"+n4); //지역변수를 호출한다.
+			//지역변수와 동일한 이름인, 전역변수 사용시, "this"로 접근한다.
+			console.log("_전역변수n4:"+this.n4); 
+			//let으로 선언된 전역변수는 "this"로 접근할 수 없다.
+			console.log("_전역변수n5:"+this.n5); 
+		}
+
+		field(); //함수호출
+
+		console.log("<<<<변수호출>>>>");
+		console.log("변수n1:"+n1);
+		console.log("변수n2:"+n2);
+		console.log("상수NUM:"+NUM);
+		//console.log("변수n3:"+n3); 함수밖에서 호출할 수 없음.
+		//console.log("매개변수a:"+a); 함수밖에서 호출할 수 없음.
+		console.log("변수n4:"+n4);
+		console.log("변수n5:"+n5);
+		console.log("변수n6:"+n6);
+
+
+		//함수가 아닌, 블록안에서 변수선언(제어문 사용)
+		{
+			var aa = 123; //전역변수
+			let bb = 456; //블록변수
+			console.log(`[블록안] aa:${aa}, bb:${bb}`);
+		}
+		console.log(`[블록밖] aa:${aa}`);
+		//console.log(`[블록밖] bb:${bb}`); 블록영역밖에서 호출할 수 없다.
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

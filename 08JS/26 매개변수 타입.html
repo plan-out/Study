@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>26 매개변수 타입</title>
+	<script>
+		//함수선언
+		function func1(ab){//매개변수ab : 하나의 값을 가지는 변수타입
+			console.log("함수1실행");
+			var value = 100+ab;//변수로써 호출
+			console.log("매개변수ab타입:"+typeof(ab));
+		}
+		
+		//함수호출
+		func1(55);
+		func1("문자");
+
+		//함수선언
+		function func2(ab){//매개변수ab : 함수타입
+			console.log("함수2실행");
+			ab(); //ab는 함수로써 호출
+			console.log("매개변수ab타입:"+typeof(ab));
+		}
+
+		var printText = function(){
+			console.log("printText함수 실행내용!!");
+		}
+
+		func2(printText);
+		func2(function(){
+			console.log("익명함수 실행내용!!");
+		});
+
+
+		//함수선언
+		function func3(ab){//매개변수ab : 객체타입
+			console.log("함수3실행");
+			var value = ab.x + ab.y;
+			ab.text(value);
+			console.log("매개변수ab타입:"+typeof(ab));
+		}
+
+		var ob = {
+			x:10, 
+			y:7,
+			text:function(aa){
+				console.log("결과출력:"+aa);
+			}
+		};
+		
+		func3(ob);
+		func3({
+			x:30, 
+			y:2,
+			a:3,
+			text:function(bb){
+				console.log("익명함수결과:"+bb);
+			}
+		});
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

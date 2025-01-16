@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>29 배열(p387)</title>
+	<script>
+		/*
+			배열객체 : 여러개의 값들을 연속적으로 저장하고,
+						전체를 하나의 단위로 다루는 데이터 구조
+		*/
+		//배열만들기
+		var numbers = new Array(11,22,33,44,55);
+
+		//배열호출
+		console.log(numbers); //배열자체가 호출
+		console.log(numbers[0]); //배열명[인덱스] => 배열값이 호출
+		console.log(numbers[4]);
+
+		//배열만들기
+		var week = ["일","월","화","수","목","금","토"];
+		console.log("오늘은 "+week[4]+"요일")
+
+		//배열객체속성(length:배열의 크기)
+		console.log("numbers배열의 크기:"+numbers.length);
+		console.log("week배열의 크기:"+week.length);
+
+		//배열객체 메서드(p388)
+		console.log(numbers.concat(week));
+
+		//forEach 메서드(p391) : 배열의 크기만큼 인수로 받은 함수를 실행한다.
+		week.forEach(function(value, index, array){
+			console.log("value:"+value);
+			console.log("index:"+index);
+			console.log("array:"+array);
+		});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

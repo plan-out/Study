@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>28 생성자함수 복습</title>
+	<script>
+		//생성자함수
+		function Student(name="",k=0,e=0,m=0){
+			this.name = name;
+			this.kor = k; 
+			this.eng = e;
+			this.math = m;
+			this.body = {height:null, weight:null}; //객체안의 객체
+			this.info = function(){
+				var total = this.kor + this.eng + this.math;
+				var avg = (total/3).toFixed(1); //소수 첫번째 자리까지 표시
+				var text = "";
+				text += `${this.name}의 점수 : 국어${this.kor}점, `;
+				text += `영어${this.eng}점, 수학${this.math}점, `;
+				text += `총점${total}점, 평균${avg}점`;
+				console.log(text);
+			};
+			this.bodyInfo = function(){
+				console.log(`${this.name}의 키 : ${this.body.height}cm`);
+				console.log(`${this.name}의 몸무게 : ${this.body.weight}kg`);				
+			}
+		}
+
+		//객체생성
+		let s1 = new Student();
+		s1.name = "김하늘";
+		s1.kor = 90;
+		s1.eng = 80;
+		s1.math = 50;
+		s1.info();
+
+		let s2 = new Student("김바다",77,62,45);
+		let s3 = new Student("김숲",99,100,84);
+
+		s2.info();
+		s3.info();
+
+		s2.body.height = 160;
+		s2.body.weight = 50;
+
+		s2.bodyInfo();
+		
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

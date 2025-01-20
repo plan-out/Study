@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>24-1 객체관한 명령어</title>
+	<script>
+		//객체선언
+		var ob = {
+							aa:10,
+							bb:20,
+							"문자":30, //속성에는 식별자 또는 문자열을 사용하여 구현
+		}
+
+		console.log(ob.문자);
+		console.log(ob["aa"]);
+
+		var bb = 100; //전역변수
+
+		//with문 : 객체안의 속성들어 보다 쉽게 접근할 수 있다
+		with(ob){
+			aa = 11;
+			bb = 22;
+			console.log(aa);
+			console.log(문자);
+			console.log(window.bb);//전역변수 호출
+		}
+
+		//in예약어 : 객체안에 속성 확인
+		console.log("aa" in ob); //속성은 ""('')로 묶어준다.
+		console.log("cc" in ob)
+
+		//for...in문 : 객체가 가지는 속성 수만큼 반복하는 반복문
+		for(var i in ob){
+			console.log(i+" : "+ob[i]);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>32 문서객체가져오기(p422)</title>
+</head>
+<body>
+	<h1 id="title">문서객체가져오기</h1>
+	<section>
+		<div class="box"><span>영역태그</span></div>
+		<div class="box"><span>영역태그</span></div>
+		<div><span>영역태그</span></div>
+	</section>
+
+	<!--작성된 태그를 제어할 경우, 해당 태그보다 아래에 script를 작성한다.-->
+	<script>
+		/*태그를 기준으로 DOM객체 만들기*/
+		var divs = document.getElementsByTagName("div");
+		//선택된 div객체들은 "divs"배열에 저장된다.
+		console.log(divs);
+		divs[0].style.border = "2px solid #f00";
+		divs[1].style.border = "2px solid #0f0";
+		divs[2].style.border = "2px solid #00f";
+
+		/*아이디를 기준으로 DOM객체 만들기*/
+		var title = document.getElementById("title");
+		console.log(title);
+		title.style.cssText = "background:#000; color:#fff; padding:10px";
+
+		/*클래스를 기준으로 DOM객체 만들기*/
+		var boxs = document.getElementsByClassName("box");
+		//배열로 만들어짐.
+		boxs[0].style["background-color"] = "#500";
+		boxs[1].style["background-color"] = "#050";
+
+		/*CSS선택자 방식을 사용하여 DOM객체 만들기*/
+		var spans = document.querySelectorAll(".box span"); //여러요소->배열
+		spans[0].style.color="#fff";
+		spans[1].style.color="#fff";
+
+		var last_span = document.querySelector("div:last-child span");
+		last_span.style.color = "#00F";
+		last_span.style.fontSize = "20px";
+	</script>
+</body>
+</html>

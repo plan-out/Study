@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>30 문서객체모델(DOM) - p421</title>
+</head>
+<body bgcolor="#ffc">
+	
+	<script>
+		/*
+			document객체
+		*/
+		var h1 = document.createElement("h1");
+		//엘리먼트(요소)노드 : html요소(<h1>) 생성
+		var text = document.createTextNode("문서객체모델");
+		//텍스트노드 생성
+
+		//생성된 노드들은 메모리에만 존재함.
+		//문서에는 구현되지 않음.
+
+		document.body.appendChild(h1); //body안에 h1요소를 넣음.
+		h1.appendChild(text); //h1요소안에 텍스트 삽입
+		/*
+			부모객체.appendChild(객체);
+				- 부모객체(태그)안에 마지막 자식으로 해당객체(인수)가 들어감.
+			부모객체.insertBefore(객체,[기준자식]);
+				- 마지막자식(태그)이나 기준자식(태그) 앞에 객체(인수)를 넣음.
+			부모객체.removeChild(객체);
+				- 해당객체(인수)를 부모객체안에서 제거함.
+		*/
+
+		var p1 = document.createElement("p");
+		var p2 = p1.cloneNode(true); //요소를 복제함
+		//인수가 없거나, false이면, 대상요소만 복제함.
+		//인수가 true면 대상의 하위요소까지 복제함.
+
+		document.body.append(p1,p2);
+		/*
+			부모객체.append(객체,객체, .....);
+			-부모객체(태그)안에 인수로 받은 객체들을 순차적으로 생성함.
+		*/
+		
+		var img = document.createElement("img");
+		p1.appendChild(img);
+
+		//태그의 속성들은 DOM객체의 속성(변수)을 정의되어 있다.
+		//단, 모든 속성이 정의되어 있지 않다.
+		img.src = "../03CSS/강아지.jpg";
+		img.width = 300;
+		img.height = 300;
+		img.alt = "이미지설명";
+
+		//다음과 같은 방법으로 속성을 설정할 수 있다.(정의되지 않은 속성도가능)
+		img.setAttribute("module","picture");
+		img.setAttribute("title","강이지사진");
+		img.setAttribute("class","dog"); 
+
+		//속성 제거
+		document.body.removeAttribute("bgcolor");
+	
+		//속성값 가져오기
+		var w = img.width;
+		var h = img.getAttribute("height");
+
+		var disc = `이미지 너비:${w}px, 높이:${h}px`;
+
+		var text2 = document.createTextNode(disc);
+
+		p2.appendChild(text2);
+
+ 
+	</script>
+</body>
+</html>

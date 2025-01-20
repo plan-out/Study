@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>31 DOM스타일제어</title>
+
+</head>
+<body>
+	<script>
+		var div = document.createElement("div");
+		var img = document.createElement("img");
+		var p = document.createElement("p");
+		var text = document.createTextNode("점점 커지는 이미지");
+
+		document.body.appendChild(div);
+		div.append(img,p);
+		p.appendChild(text);
+
+		var w = 100;
+
+		img.src = "../03CSS/고양이.png";
+		img.width = w;
+
+		function scaleUp(){
+			w++;
+			img.width = w;
+			if(w == 500) clearInterval(motion);
+		}
+
+		var motion = setInterval(scaleUp, 100);
+
+		//스타일을 동적으로 부여하기(인라인스타일 적용됨.)
+		div.style.border = "10px solid #f00";
+		div.style.display = "inline-block";
+		div.style.textAlign = "center";
+		//"-"대신 연결된 단어의 첫글자를 대문자로 작성
+		div.style["margin-left"] = "50px";
+		div.style["background-color"] ="#ffc";
+
+		p.style.cssText = "font-size:40px; color:#00f;";
+		//기존의 스타일을 지우고 넣어줌.
+
+	
+
+	</script>
+</body>
+</html>

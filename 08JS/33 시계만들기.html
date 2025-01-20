@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>33 시계만들기</title>
+	<style>
+		@font-face {
+				font-family: '양진체';
+				src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+		}
+
+		*{margin:0; padding:0;}
+		body{height:100vh; background:#0f3854;
+			background-image:radial-gradient(#0a2e38, #000);
+			display:flex; flex-direction:column; text-align:center;
+			justify-content:center; align-items:center;
+			font-family:"양진체"; color:#daf6ff;}
+		#date{font-size:30px; letter-spacing:2px;}
+		#time{font-size:80px; margin-top:10px;}
+	</style>
+</head>
+<body>
+	<p id="date">2000-01-01 MON</p>
+	<p id="time">00 : 00 : 00</p>
+
+	<script>
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth()+1;
+		month = String(month).padStart(2,"0");
+		var day = today.getDate();
+		day = String(day).padStart(2,"0");
+		/*
+		String(인수); 인수를 String(문자)객체로 변환한다.
+		- String객체.padStart(자리수,"채울문자");
+		- String객체.padEnd(자리수,"채울문자");
+		:원하는 자리수만큼 텍스트를 표현하고, 채울문자를 지정할 수 있다.
+		*/
+		var week = ["SUN","MON","TUE","WED","THD","FRI","SAT"];//배열
+		var w = today.getDay(); //요일 0~6 출력
+
+		var date = document.getElementById("date");
+		date.innerHTML = `${year}-${month}-${day} ${week[w]}`;
+
+		var time = document.getElementById("time");
+
+		function updateTime(){
+			var now = new Date();
+			var hh = String(now.getHours()).padStart(2,"0");
+			var mm = String(now.getMinutes()).padStart(2,"0");
+			var ss = String(now.getSeconds()).padStart(2,"0");
+			time.innerHTML = `${hh} : ${mm} : ${ss}`;
+		}
+
+		updateTime();//처음 한번 바로 호출
+		setInterval(updateTime,1000);
+	</script>	
+</body>
+</html>

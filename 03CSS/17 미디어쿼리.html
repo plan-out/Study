@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>17 미디어쿼리</title>
+	<style>
+		body{background:#ccc; font-size:30px; font-weight:bold;}
+	
+		/*화면의 최대너비가 500px인 경우(화면너비가 500px이하)*/
+		@media (max-width:500px){
+			body{background:#fcc;}
+		}
+
+		/*화면의 최소너비가 1200px인 경우(화면너비가 1200px이상)*/
+		@media (min-width:1200px){
+			body{background:#ffc;}
+		}
+
+		/*화면의 너비가 700px ~ 1000px 사이인 경우*/
+		@media (min-width:700px) and (max-width:1000px){
+			/*모든 조건을 만족해야함.*/
+			body{background:#cfc;}
+		}
+
+		/*화면의 너비가 600px이하이거나, 1100px이상인 경우*/
+		@media (max-width:600px), (min-width:1100px){
+			/*제시된 조건 중, 하나의 조건만 성립되면된다.*/
+			body{color:#00f;}
+		}
+	</style>
+</head>
+<body>
+	<h1>미디어쿼리</h1>
+	<p>디바이스의 타입이 아닌, 특성에 따라 스타일을 적용함</p>
+	<p>미디어 특성 정리 : 반응형웹페이지만들기 교재:p82</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>34 data속성</title>
+</head>
+<body>
+	<h1>사용자 지정(정의) 속성_data속성</h1>
+	<p id="aa" class="bb" data-ezen="web" data-resize="400">
+		<img src="../03CSS/고양이.png" alt="이미지" width="200">
+	</p>
+
+	<script>
+		var p = document.getElementById("aa");
+
+		/*속성 추가 부여*/
+		p.setAttribute("data-name","사용자지정속성");
+
+		/*속성값 가져오기*/
+		var ezen = p.getAttribute("data-ezen");
+		console.log(ezen);
+
+		/*사용자지정속성값 가져오기*/
+		var d1 = p.dataset.ezen;
+		console.log("d1:"+d1);
+		var d2 = p.dataset["resize"];
+		console.log("d2:"+d2);
+
+		/*사용자지정속성 부여하기*/
+		p.dataset.abcd = "1234";
+
+		/*사용자지정속성 제거하기*/
+		delete p.dataset.resize;
+
+
+	</script>
+</body>
+</html>

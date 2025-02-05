@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>36 클래스제어</title>
+	<style>
+		#box{position:fixed; width:10%; top:20px; bottom:20px;
+			right:20px; background:#fcc; transition:all .4s;}
+		#box.active{width:40%; background:#ffc;}
+
+		a{display:block; padding:20px 10px; font-size:30px;
+			background:#000; color:#fff; font-weight:bold;
+			cursor:pointer; width:fit-content; margin-bottom:20px;}
+	</style>
+</head>
+<body>
+	<div id="box" class="area efgh"></div>
+	<a id="btn1">클래스추가</a>
+	<a id="btn2">클래스제거</a>
+	<a id="btn3">클래스추가/제거</a>
+
+	<script>
+		var box = document.getElementById("box");
+		var b1 = document.querySelector("#btn1");
+		var b2 = document.querySelector("#btn2");
+		var b3 = document.querySelector("#btn3");
+
+		b1.addEventListener("click",function(){
+			box.classList.add("active");
+		});
+
+		b2.addEventListener("click",function(){
+			box.classList.remove("active");
+		});
+
+		b3.addEventListener("click",function(){
+			box.classList.toggle("active");	
+			var value = box.classList.contains("active");
+			if(value){
+				b3.innerHTML="닫힘";
+			}else{
+				b3.innerHTML="열림";
+			}
+		});
+
+		box.classList.replace("area","abcd");
+
+		var text = box.classList.item(1);
+		box.innerHTML = text;
+		/*
+			DOM객체.classList.add("클래스명"); 인수값을 요소에 클래스로 부여함.
+			DOM객체.classList.remove("클래스명"); 해당클래스를 제거함.
+			DOM객체.classList.toggle("클래스명"); 클래스 부여와 제거
+			DOM객체.classList.contains("클래스명");
+				해당클래스가 있으면 true, 없으면 false라는 논리값을 출력
+			DOM객체.classList.replace("기존이름","새이름");
+				클래스명을 "기존이름"에서 "새이름"으로 바꿈
+			DOM객체.classList.item(정수);
+			  여러개의 클래스가 설정되었을 시, 특정순번의 클래스명을 반환한다.	
+		*/
+	</script>
+</body>
+</html>

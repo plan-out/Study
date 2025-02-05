@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>35 이벤트(p404)</title>
+	<script>
+		window.onload = init; //해당 브라우저가 다 준비되면 init함수를 실행
+
+		function init(){
+			//id="box"를 dom객체로 만들기
+			var box = document.getElementById("box");
+			//스타일부여하기
+			box.style.cssText = "background:#ccc; border:10px solid #000;";
+			box.style.color = "#fff";
+			box.style["width"] = "300px";
+			box.style["height"] = "80px";
+
+			var btn = document.querySelectorAll(".btn");//선택된 요소모두 배열
+
+			/*기본이벤트모델*/
+			btn[0].onclick = function(){ //실행되지 않음.
+				changeColor();
+			}
+			btn[0].onclick = function(){ //이 함수만 실행됨.
+				document.body.style.background = "pink";
+			}
+			//기본이벤트 모델은 중복작성되는 경우, 마지막에 설정된 이벤트만 동작됨.
+
+			/*표준이벤트모델(★★★★★)*/
+			btn[1].addEventListener("click",function(){
+				changeColor("purple");
+			});
+			btn[1].addEventListener("click",function(){
+				document.body.style.background = "gold";
+			});
+			//동일한 두 이벤트가 모두 실행
+
+		}//end:init()
+
+		function changeColor(color="yellow"){
+			var box = document.getElementById("box");
+			box.style.background = color;
+		}		
+	</script>
+</head>
+<body>
+	<h1 id="box">이벤트 학습하기</h1>
+	<!--인라인이벤트 모델-->
+	<a onclick="changeColor('red')">red</a>
+	<a ondblclick='changeColor("blue")'>blue</a>
+	<a onmouseup="changeColor('green')">green</a>
+	<a class="btn">버튼1</a>
+	<a class="btn">버튼2</a>
+</body>
+</html>

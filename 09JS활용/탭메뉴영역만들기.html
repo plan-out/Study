@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>탭 메뉴 영역만들기</title>
+	<style>
+		*{margin:0; padding:0;}
+		li{list-style:none;}
+
+		body{height:100vh; display:flex; justify-content:center;
+			align-items:center;}
+		#wrap{width:80%; height:80%; color:#333;}
+		#wrap h1{text-align:center; font-size:40px; margin-bottom:1.5em;
+			text-shadow:0 2px #0003;}
+
+		.tab_menu{display:flex; gap:4px;}
+		.tab_menu a{display:block; font-size:16px; color:#607291; 
+			background:#e5e9ea; padding:0.5em 1.5em; line-height:1.5em;
+			transition:all .2s ease-in-out; border-radius:7px 7px 0 0;
+			text-decoration:none;}
+		.tab_menu a:hover,
+		.tab_menu a.active{background:#f9f9f9;  
+			box-shadow:-1px -1px 2px #5c5c5c33; color:#333;}
+
+		.tab_contents{padding-top:10px; display:flex; flex-wrap:wrap;
+			gap:40px;}
+		.tab_contents article{width:300px; height:300px; flex-shrink:0;
+			display:none;}
+		.tab_contents article.active{display:block;}	
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>탭 메뉴 디자인</h1>
+		<ul class="tab_menu">
+			<li><a href="All" class="active">All</a></li>
+			<li><a href=".red">Red_tab</a></li>
+			<li><a href=".blue">Blue_tab</a></li>
+			<li><a href=".green">Green_tab</a></li>
+		</ul>
+		<div class="tab_contents">
+			<article class="red active" style="background:#fcc;">1</article>
+			<article class="blue active" style="background:#ccf;">2</article>
+			<article class="green active" style="background:#cfc;">3</article>
+			<article class="red active" style="background:#fcc;">4</article>
+			<article class="blue active" style="background:#ccf;">5</article>
+			<article class="green active" style="background:#cfc;">6</article>
+		</div><!--//#tabcontents-->
+	</div><!--//#wrap-->
+
+	<script>
+		var btns = document.querySelectorAll(".tab_menu a");//버튼의 배열
+
+		function removeActive(b,t){
+			var actives = document.querySelectorAll("#wrap .active");		
+			//NodeList를 배열로 변환
+			var actives = Array.from(actives);
+			t = Array.from(t);
+			//filter메소드를 통해 t배열과 동일한 요소를 제거한 후, 새로운 배열생성
+			var re = actives.filter((x) =>!t.includes(x));	
+			re.forEach(function(at){
+				if(at!==b) at.classList.remove("active");
+			});
+		}
+
+		btns.forEach(function(btn){
+			btn.addEventListener("click",function(e){
+				e.preventDefault();//태그의 기본이벤트 실행을 막는다.(p411)
+				var href = this.getAttribute("href");//".red"
+				if(href == "All"){
+					var targets = document.querySelectorAll(".tab_contents article");
+				}else{
+					var targets = document.querySelectorAll(href);		
+				}
+				targets.forEach(function(target){
+					target.classList.add("active");
+				});				
+				this.classList.add("active");
+				removeActive(this, targets);
+			});
+		});//end:.forEach()
+
+	</script>
+</body>
+</html>

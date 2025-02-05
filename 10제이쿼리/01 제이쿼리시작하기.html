@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>01 제이쿼리시작하기</title>
+	<script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+	<div id="box">박스영역</div>
+
+	<script>
+		/*DOM객체로 만든 후, 스타일 설정*/
+		var box1 = document.getElementById("box");
+		box1.style.background = "#ffc";
+
+		/*제이쿼리로 제어 $ = jQuery*/
+		var box2 = $("#box"); //제이쿼리 객체를 만듦.
+		box2.css("width",200);
+		box2.css("height",100);
+
+		$("body").css("background","gray");
+	</script>
+</body>
+</html>

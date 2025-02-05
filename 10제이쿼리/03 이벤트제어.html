@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>03 이벤트제어</title>
+	<style>
+		a{font-size:30px; background:#000; color:#fff; padding:10px;
+			margin:10px; font-weight:bold; cursor:pointer;}
+	</style>
+	<script src="jquery-3.7.1.js"></script>
+	<script>
+		//제이쿼리실행환경
+		$(function(){
+
+			$("body").css("background","gray");
+
+			function bgcolor(){
+				$("body").css("background","red");
+			}
+
+			$(".btn1").click(bgcolor);
+			
+			$(".btn2").click(function(){
+				$("body").css("background","blue");
+			});
+
+			$(".btn3").on("click",function(){
+				$("body").css("background","green");
+			});
+
+			$(".btn4").add(".btn5").on("mouseover",function(){
+				$("body").css("background","yellow");
+			});
+
+			$(".btn4").add(".btn5").on("mouseout",function(){
+				$("body").css("background","cyan");
+			});
+
+			$("body").css("height",3000);
+
+			$(window).on("resize scroll",function(){
+				$("body").css("background","pink");
+			})
+
+
+		}); //end:$();
+	</script>
+</head>
+<body>
+	<a class="btn1">red</a>
+	<a class="btn2">blue</a>
+	<a class="btn3">green</a>
+	<a class="btn4">yellow</a>
+	<a class="btn5">cyan</a>
+	<a class="btn6">pink</a>
+</body>
+</html>

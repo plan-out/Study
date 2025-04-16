@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float예제2번</title>
+  <style>
+    #box{
+      border:10px solid #000;
+      width:400px; height:500px;
+      background-image:url("./짱구.png");
+      background-repeat:no-repeat;
+      background-size:auto 500px;
+      background-position:center top;
+    }
+
+    #box div{width:100px; height:100px;}
+
+    .left{float:left;}
+    .right{float:right;}
+
+    #box div:nth-child(4),
+    #box div:nth-child(6),
+    #box div:nth-child(8),
+    #box div:nth-child(10){clear:both;}
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div class="left" style="background:rgba(255, 0, 0);"></div>
+    <div class="left" style="background:rgba(221, 255, 0);"></div>
+    <div class="left" style="background:rgba(17, 0, 255);"></div>
+    <div class="left" style="background:rgba(136, 0, 255);"></div>
+    <div class="left" style="background:rgba(255, 0, 162);"></div>
+    <div class="left" style="background:rgba(255, 170, 0);"></div>
+    <div class="right" style="background:rgba(255, 132, 0);"></div>
+    <div class="right" style="background:rgba(0, 255, 255);"></div>
+    <div class="right" style="background:rgba(255, 0, 170);"></div>
+    <div class="right" style="background:rgba(195, 255, 0);"></div>
+    <div class="right" style="background:rgba(0, 255, 208);"></div>
+    <div class="right" style="background:rgba(187, 157, 233);"></div>
+  </div>
+</body>
+</html>

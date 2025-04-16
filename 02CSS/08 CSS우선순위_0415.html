@@ -9,7 +9,7 @@
 
     #this{background:lime;}
 
-    .parent .child:first-child{background:purple;}
+    .parent a:first-child{background:purple;} 
     .parent .child{background:violet;}
 
     .grand h1 a{background:navy;}
@@ -22,8 +22,8 @@
     div h1 a{background:magenta;}
     h1 a{background:cyan;}
 
-    a{background:red;}
-    a{background:blue;}
+    a{background:red !important;}
+    a{background:blue !important;}
   </style>
   <link rel="stylesheet" href="우선순위.css">
   <style>
@@ -32,7 +32,7 @@
 </head>
 <body>
   <div class="grand">
-    <h1 class="parent"><a class="child" id="this">CSS우선순위</a></h1>
+    <h1 class="parent"><a class="child" id="this" style="background:gold;">CSS우선순위</a></h1>
   </div>
 </body>
 </html>

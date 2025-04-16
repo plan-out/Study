@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/*외부 CSS문서 연결하기(p163)*/
+@import url("여백.css");
+
+
+/*태그셀렉터*/
+h1{font-family:"궁서"; color:#8041D9;
+	text-shadow:1px 1px 1px #999;}
+hr{height:10px; background:red;}
+div{width:300px; height:100px;
+	background:gray; color:#fff;
+	border:5px solid #000;}
+	
+/*아이디셀렉터 : 페이지내에서 중복불가*/	
+#A{background:#ff0;}
+#b{background:#f0f;}
+#c{background:#0ff;}
+
+/*클래스셀렉터 : 중복가능, 다중부여가능*/
+.abc{color:blue; font-weight:bold;}
+.def{font-size:30px; text-align:right;}
+

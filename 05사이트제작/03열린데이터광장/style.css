@@ -24,15 +24,12 @@ header #user_menu{float:right; font-size:0;}
 header #user_menu li{display:inline-block;}
 
 /*중앙*/
-main{width:1200px; height:3000px; margin:0 auto;
-  border:10px solid #000;}
+main{width:1200px; margin:0 auto; overflow:hidden;}
 main .container{padding:50px 0; overflow:hidden;
   background-image:url("./images/bg.png");
   background-repeat:no-repeat; 
   background-position:center center;
   background-size:auto 100%;}
-
-main section{outline:2px solid #f00;}
 
 #title{float:left;}
 #title h2{font-size:33px; color:#fff; margin-bottom:30px;}
@@ -49,5 +46,28 @@ main section{outline:2px solid #f00;}
   font-family:"Roboto";}  
 
 #icon{float:left;}
-
 #banner{float:right;}
+
+#board1{float:left; margin-top:40px;}
+#board2{float:right; margin:40px 0 50px;}
+
+#item{background:#e3eaf4; clear:both; font-size:0;
+  padding:60px 0; margin-bottom:40px;}
+#item li{display:inline-block;}
+
+#notice{float:left;}
+#etc{float:right; width:579px;}
+#etc p{float:left;}
+#etc p:first-child{margin-right:10px;}
+#etc p:last-child{margin-top:10px;}
+
+
+footer{width:1200px; margin:40px auto 0; overflow:hidden;
+  background:#505256; padding-bottom:25px;}
+footer .inner{overflow:hidden; background:#434547;
+  padding:12px 0; margin-bottom:25px;}
+footer #btm_menu{float:left; margin-left:190px;}
+footer #btm_menu li{float:left;}
+footer #jump_menu{float:right;}
+footer #btm_logo{float:left; margin-right:35px;}
+footer #btm_info{float:left;}

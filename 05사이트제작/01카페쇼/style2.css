@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:top;}
+
+header{border:3px solid #f00;}
+header .top{background:#f0f0f0;}
+header .inner{width:1200px; display:flex; margin:0 auto;
+  justify-content: space-between; 
+  border:3px solid #00f;}
+header div{border:1px solid #000;}
+header ul{display:flex;}

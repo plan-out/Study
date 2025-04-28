@@ -20,9 +20,7 @@ img, iframe{vertical-align:top;}
 #header #main_menu{float:right; font-size:0;}
 #header #main_menu li{display:inline-block;}
 
-#main{width:1200px; height:3000px; margin:20px auto 0;
-  border:10px solid #00f;}
-#main > div{outline:3px solid #f00;}
+#main{width:1200px; margin:20px auto 0;}
 
 #main_visual{margin-bottom:60px;}
 
@@ -33,7 +31,7 @@ img, iframe{vertical-align:top;}
 
 #info{float:left; margin:68px 0 45px 24px;}
 
-#event_list{clear:both; height:450px;
+#event_list{clear:both; height:450px; margin-bottom:60px;
   background:url("./images/event_wide_bg.jpg") no-repeat center top/auto 100%;
   font-family:"나눔고딕","맑은 고딕","돋움";
   text-align:center;}
@@ -43,6 +41,14 @@ img, iframe{vertical-align:top;}
 #event_list img{width:100%; border-radius:50%;
   margin-bottom:25px;}
 
+#forum{float:left;}
+#ads{float:right;}
+#forum h2,
+#ads h2{margin-bottom:20px;}
+
+#host_list{clear:both; text-align:center; overflow:hidden;}
+#host_list h2{padding:65px 0 40px;}
+#host_list li{float:left; width:25%;}
 
 
 #footer{border:10px solid #0f0; display:none;}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>예제2</title>
+    <style>
+    *{margin:0; padding:0;}
+    img{vertical-align:top;}
+
+    body{height:100vh;
+      background:url("img2/dog.png") no-repeat right top #F5EDE3;
+      display:flex; justify-content:center;
+      align-items:center;
+    }
+
+    #얼굴{position:relative; border:5px solid #f00;}
+    
+    #얼굴 div{position:absolute; }
+    #왼귀{top:-81px; left:8px; z-index:-1;}
+    #오른귀{top:-81px; right:8px; z-index:-1;}
+    #왼눈{top:220px; left:137px;}
+    #오른눈{top:220px; right:137px;}
+    #턱{bottom:0; left:9px;}
+    #홍조_좌{top:270px; left:128px;}
+    #홍조_우{top:270px; right:128px;}
+    #코{top:220px; left:240px;}
+    #입{top:250px; left:246px;}
+    #그림자{bottom:0; right:0;}
+
+    @keyframes ear_ani{
+      from{transform:rotate(5deg);}
+      to{transform:rotate(-5deg);}
+    }
+
+    #왼귀{
+      transform-origin:right bottom;
+      animation-name:ear_ani; /*애니메이션이름*/
+      animation-duration:0.6s;  /*동작시간*/
+      animation-iteration-count:infinite; /*반복횟수*/
+        /*infinite(무한반복)*/
+      animation-direction:alternate;/*재생방향(정-역)*/
+      animation-timing-function:linear;/*구간별속도*/
+    }
+    #오른귀{
+      transform-origin:left bottom;
+      animation:ear_ani .6s infinite alternate-reverse linear;
+    }
+
+    #얼굴:hover #왼귀,
+    #얼굴:hover #오른귀{animation-play-state:paused;}
+    /* 재생상태:  running(재생,기본값) paused(일시정지)*/
+
+    @keyframes nose_ani{
+      0%{transform:translateY(0);}
+      10%{transform:translateY(-5px);}
+      20%{transform:translateY(0px);}
+      30%{transform:translateY(-5px);}
+      40%{transform:translateY(0px);}
+      100%{transform:translateY(0px);}
+    }
+
+    #코{
+      animation:nose_ani 3s infinite;
+    }
+    </style>
+  </head>
+  <body>
+    <section id="얼굴">
+      <p><img src="img2/face.png"/></p>
+      <div id="왼귀"><img src="./img2/ear_left_out.png" alt=""></div>
+      <div id="오른귀"><img src="./img2/ear_right_out.png" alt=""></div>
+      <div id="왼눈"><img src="./img2/eye_left.png" alt=""></div>
+      <div id="오른눈"><img src="./img2/eye_right.png" alt=""></div>
+      <div id="턱"><img src="./img2/jaw.png" alt=""></div>
+      <div id="홍조_좌"><img src="./img2/flush_left.png" alt=""></div>
+      <div id="홍조_우"><img src="./img2/flush_right.png" alt=""></div>
+      <div id="코"><img src="./img2/nose.png" alt=""></div>
+      <div id="입"><img src="./img2/mouth.png" alt=""></div>
+      <div id="그림자"><img src="./img2/shadow.png" alt=""></div>
+    </section>
+  </body>
+</html>

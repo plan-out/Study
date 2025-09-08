@@ -1,0 +1,36 @@
+
+대상{속성:속성값; 속성:속성값; 속성:속성값  속성값  속성값;}
+
+body{background:#FFccCC;}
+
+h1{
+	color:green;		/*글자색상*/
+	font-family:"카페24 동동";	/*글자체(폰트)*/	
+	font-size:50px;	/*글자크기*/
+}
+
+p{	
+	font-family:"돋움";	/*글자체(폰트)*/
+	font-size:24px;	/*글자크기*/
+	line-height:40px;	/*행높이(줄간격)*/
+	text-align:center;	/*글자의 수평정렬*/
+	/*left(기본값), right, center, justify(양쪽정렬)*/
+	letter-spacing:3px; 	/*글자사이간격(자간)*/
+	text-indent:50px;	/*첫줄 들여쓰기 or 내어쓰기*/
+}
+
+strong{
+	color:red;	/*글자색*/
+	font-weight:normal;	/*글자의 굵기설정*/
+	font-style:italic;	/*글자기울리기*/
+	text-decoration:underline;	
+	/*underline(밑줄), overline(윗줄), line-through:(취소선)*/
+}
+
+em{
+	font-weight:bold;	/*bold=굵게표현*/
+	font-style:normal; 	/*기울림 해제*/
+	text-transform:uppercase;	
+	/*uppercase(모두대문자), lowercase(모두소문자),
+		capitalize(각 단어의 첫글자만 대문자)*/
+}

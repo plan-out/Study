@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta charset="utf-8"><!--문자 인코딩방식 표기-->
+		
+		<title>11 페이지안에 페이지만들기</title>
+	</head>
+	<body>
+	<p><iframe src="버튼.html" frameborder="0" width="800" height="40"></iframe></p>
+
+		<h1>인라인프레임 : &lt;iframe&gt;</h1>
+		<p>페이지 안에 다른 <strong>웹페이지</strong>나 
+		<em>웹사이트</em>를<br>
+		표시할 수 있는 태그</p>
+		
+		<!--
+			<strong>태그 : 강조태그
+			<em>태그 : 강조태그
+			강조태그 : 내용(텍스트)를 강조하여 표시하는 태그
+		-->
+		
+		<!--엔티티코드 : 웹에서 사용하는 특수문자-->
+		
+		<p><iframe src="https://www.starbucks.co.kr"
+			width="800" height="400" name="view"></iframe></p>
+			
+		<ul><!--비순차목록태그-->	
+			<li><a target="_self" href="https://www.naver.com">네이버</a></li>
+			<li><a target="view" href="https://www.daum.net">다음</a></li>
+			<li><a target="_blank" href="https://www.google.com">구글</a></li>
+			<li><a target="view" href="10목록만들기.html">10목록만들기</a></li>
+		</ul>
+	</body>
+</html>

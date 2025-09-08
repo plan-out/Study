@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+p{
+	width:100px; height:100px; 
+	border-width:16px; /*선의 두께*/
+	text-align:center; line-height:100px;
+	margin:40px; float:left; 
+}
+.b1{
+	border-style:solid;	/*선의 스타일*/
+	border-color:#77BEF0;	/*선의 색상*/
+}	
+.b2{	border-style:dotted; border-color:#FFCB61;}
+.b3{	border-style:dashed; border-color:#9ECAD6;}
+.b4{	border-style:double; border-color:#FF894F;}
+.b5{	border-style:groove; border-color:#EA5B6F;}
+.b6{	border-style:ridge; border-color:#4A9782;}
+.b7{	border-style:inset; border-color:#03A6A1;}
+.b8{	border-style:outset; border-color:#898AC4;}
+
+h1{
+	width:200px; height:200px;
+	/*단축속성(축약속성)*/
+	border:10px solid #000;
+	/*위치별 설정가능*/
+	border-top:20px double #f00;
+	border-bottom:5px dashed #0f0;
+	/*위치별-속성별 설정가능*/
+	border-left-color:#00f;
+	border-right-width:20px;
+	
+	/*윤곽선(외곽선) : 
+		- 선보다 바깥쪽에 표현, 
+		- 크기와 위치에 영향을 주지 않는다.
+		- 위치별로 설정할 수 없다.*/
+	outline:20px solid #ff0; 
+	outline-offset:20px; /*이동시킬 수 있다.*/		
+}
+
+body{
+	height:3000px;
+	background-color:#cff;		/*배경색상*/
+	background-image:url("짱구.png");	 	/*배경이미지*/
+	background-repeat:no-repeat;		/*반복여부*/
+	/* repeat(기본값_반복), repeat-x(수평반복),
+		repeat-y(수직반복), no-repeat(반복안함) */
+	background-position:50% top;	/*배경위치*/	
+	background-attachment:fixed;	/*배치방법*/
+	/* scroll(기본값), fixed(화면에 고정됨)*/
+	background-size:400px auto;	/*배경크기*/
+	/*
+		cover : 비율유지, 최소한의 사이즈로 화면 전체를 감쌈.
+		contain : 비율유지, 최대한의 사이즈로 이미지 전체가 보임.
+	*/
+	/*
+		이 외에도 	background-origin, background-clip 등 이 있다.
+	*/
+	/*
+		축약작성
+		background:[색상] [url("주소")]  [수평위치] 
+							  [수직위치]/[너비]  [ 높이]  [반복여부]  [배치];
+	*/
+	background:
+		url("../고양이.jpg") no-repeat 200px 200px,
+		url("짱구.png") no-repeat 100px top #cff;
+		/*다중설정 가능*/
+}

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>10 대상의 구성방식</title>
+		<style>
+			/*모든태그(요소)*/
+			*{margin:0;}
+			
+			/*복수대상*/
+			h3, h4, p{border:1px  solid  #000;}
+			.box1, .box2{background:#F5C9B0; 
+				margin:20px  30px  0;}
+				
+			/*위치적 조건부여(조상 - 자손)*/	
+			#wrap  div{border:10px solid #f00; padding:10px;}
+			#wrap  p{font-family:"궁서"; font-size:20px;}
+			
+			/*위치적 조건부여(부모 - 자식)*/
+			#wrap > p{color:#0f0; font-weight:bold;}
+			
+			/*바로 다음에 오는 형제요소*/
+			h3 + p{color:#00f; font-weight:bold;}
+			
+			/*뒤에 오는(밑에 있는) 모든 형제요소*/
+			h4 ~ p{color:#0ff; font-style:italic;}
+			
+			/*하나의 요소를 지정(정밀지정)*/
+			h1#this.abc.def{
+				font-size:50px; color:gold; background:gray;
+				line-height:80px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="this" class="abc  def">대상의 구성방식</h1>
+		<div id="wrap">
+			<p>: CSS에서 셀텍터를 조합하여 대상을 구성하는 다양한 방식</p>
+			<div class="box1">
+				<h3>박스1의 제목</h3>
+				<p>박스1의 문단1</p>
+				<p>박스1의 문단2</p>
+				<p>박스1의 문단3</p>
+			</div>
+			<div class="box2">
+				<p>박스2의 문단1</p>
+				<h4>박스2의 제목</h4>
+				<p>박스2의 문단2</p>
+				<p>박스2의 문단3</p>
+			</div>
+		</div>
+	</body>
+</html>

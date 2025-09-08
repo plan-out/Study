@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+대상{속성:속성값; 속성:속성값;}
+
+/*셀렉터(선택자) : 대상을 구성하는 요소*/
+
+/*태그셀렉터*/
+h1{font-size:40px; font-family:"G마켓 산스";
+	color:#640D5F;}
+div{width:300px; height:100px; background:gray;
+	color:#FFF; border:5px solid #000;}	
+	
+/*아이디셀렉터(#아이디) : 중복불가*/	
+#a{background:#347433;}
+#b{background:#FFC107;}
+#c{background:#B22222;}
+
+/*클래스셀렉터(.클래스) : 중복가능, 다중부여가능*/
+.sky{color:#F00; font-weight:bold;}
+.rain{font-size:30px; text-align:right;}

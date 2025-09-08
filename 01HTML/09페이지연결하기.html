@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="김기환">
+		<meta name="description" content="A 태그 사용법">
+		
+		<title>09 페이지연결하기</title>
+	</head>
+	<body>
+	<p><iframe src="버튼.html" frameborder="0" width="800" height="40"></iframe></p>
+
+		<h1>A태그(=링크태그 p38)</h1>
+		<p>: 텍스트나 이미지를 클릭하면, 다른 웹페이지로 
+		이동하는 기능을 부여하는 태그</p>
+		<hr>
+		<div>
+			<h2>텍스트에 링크 설정</h2>
+			<!-- 절대경로로 주소지정 -->
+			<p>1.네이버 : <a href="https://www.naver.com">연결버튼</a></p>
+			<p>2.스타벅스 : <a href="https://www.starbucks.co.kr/">연결버튼</a></p>
+			<!-- 상대경로로 주소지정 -->
+			<p>3.다른문서 : <a href="08경로지정방법.html">연결버튼</a></p>
+		</div>
+		<hr>
+		<div>
+			<h2>이미지에 링크 설정</h2>
+			<p>
+				<!--속성 target="_self" : (기본값) 현재 페이지에 연결-->
+				<a target="_self" href="https://www.naver.com"><img src="로고/네이버.jpg" width="100"></a>
+				<!--속성  target="_blank" : 새 창(탭)에 페이지를 연결-->
+				<a target="_blank" href="https://www.starbucks.co.kr"><img src="./로고/스타벅스.png" height="100"></a>	
+			</p>
+		</div>
+	</body>
+</html>

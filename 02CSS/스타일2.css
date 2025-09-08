@@ -1,0 +1,23 @@
+@charset "utf-8"; /*문자 인코딩 정보 표기*/
+
+div{
+	border:5px  solid  #1C352D;
+}
+
+h1{
+	font-family:"G마켓 산스";
+	font-weight:100;
+	color:#E4004B;
+	font-size:50px;
+	border:5px solid #ED775A;
+}	
+
+p{
+	font-family:"카페24 슈퍼매직";
+	font-size:24px;
+	color:#6A0066;
+	border:5px solid #33A1E0;
+	width:400px;
+	height:200px;
+	background:#F5BABB;
+}

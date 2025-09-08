@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05 태그의 구조</title>
+		<style>
+			#box1{
+				border:10px  solid  #000;
+				background:#FCC;
+				width:300px; height:100px;
+			}
+			
+			#box2{
+				border:10px  solid  red;
+				background:#CCF;
+				width:300px; height:300px;
+				padding:20px  40px  60px  80px;	/*내부여백*/
+				margin:40px;	/*외부여백*/
+				/*마진과 패딩은 입력방식이 동일하다.*/
+			}
+			
+			/*
+				padding:값;	네 방향 전체에 동일하게 적용
+				padding:값1  값2;	 값1:위아래    값2:왼쪽오른쪽
+				padding:값1  값2  값3;
+					값1:위,   값2:왼쪽오른쪽,   값3:아래
+				padding:값1  값2  값3  값4;	시계방향 
+			*/
+			
+			
+			#box3{
+				background:#0F0;
+				/*분할아여 작성가능*/
+				padding-top:10px;
+				padding-left:20px;
+				padding-right:30px;
+				padding-bottom:40px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>태그의 구조(박스모델)</h1>
+		<p>: 모든 태그는 네모난 box의 형태이다.</p>
+		<div id="box1">박스1</div>
+		<div id="box2"><img src="짱구.png"></div>
+		<div id="box3">박스3</div>
+	</body>
+</html>

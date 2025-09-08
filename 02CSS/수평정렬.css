@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/*모든태그*/
+*{margin:0;}
+
+div{ border:10px solid #FFC900;
+	margin-bottom:40px;}
+
+h2{background:#FF9B00; color:#FFF;
+	padding:5px;}	
+	
+p{ width:100px; height:100px;
+	border:5px solid #000;
+	background:pink; 
+	font-size:30px; 
+	font-weight:bold;
+	text-transform:uppercase;	/*모두대문자*/
+}	
+
+#box1{text-align:center;}
+#box1  p{
+	display:inline;
+}
+
+#box2{text-align:right;}
+#box2  p{
+	display:inline-block;
+}	
+
+#box3  p{
+	float:left;
+}
+
+#box3  .b,  #box3  .d{float:right;}
+
+#box3  .d{clear:both;}

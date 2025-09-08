@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*리셋코드 : 태그가 가지는 기본값을 0 또는 none으로 설정*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img,iframe{vertical-align:top;}
+
+
+#header{width:1200px; margin:0 auto; overflow:hidden;
+  /*블록태그의 가운데 배치는 좌우측 외부여백(margin)을
+    auto(자동)로 설정한다.*/
+  border-top:3px solid #da1f3d;}
+/* #header div{border:1px solid #f00;}   */
+#header .top{background:#f0f0f0; overflow:hidden;}
+#header #sns_menu{float:left; font-size:0;}
+#header #sns_menu li{display:inline-block;}
+#header #user_menu{float:right; font-size:0;}
+#header #user_menu li{display:inline-block;} 
+#header #logo{clear:both; float:left; margin-top:65px;}
+#header #banner{float:right; margin:10px 0 14px;}
+#header #main_menu{float:right; font-size:0;}
+#header #main_menu li{display:inline-block;}
+
+
+#main{width:1200px; margin:20px auto 0; }
+
+#main_view{margin-bottom:60px;}
+
+#notice{float:left; margin-left:24px;}
+#notice h2{margin-bottom:20px;}
+
+#movie{float:left; margin-left:24px;}
+#movie h2{margin-bottom:20px;}
+
+#tel{float:left; margin:68px 0 45px 24px;}
+
+#event_list{clear:both; height:450px; margin-bottom:60px;
+  /*margin-top:450px; 메인뷰영역기준하여 여백이 설정됨. */
+  background:url("./images/event_wide_bg.jpg") center top;
+  font-family:"나눔고딕","맑은 고딕","돋움";}
+#event_list h2{font-size:35px; text-align:center;
+  padding:40px 0;}
+#event_list li{float:left; width:18%; margin:0 1%;
+  text-align:center; font-size:20px; font-weight:bold;}
+#event_list img{width:100%; margin-bottom:25px;
+  border-radius:50%;/*모서리 둥글게*/}
+
+#forum{float:left;}
+#forum h2{margin-bottom:20px;}
+
+#ads{float:right;}
+#ads h2{margin-bottom:20px;}
+
+#host_list{clear:both; padding-top:70px; 
+  text-align:center;}
+#host_list h2{margin-bottom:40px;}
+#host_list ul{overflow:hidden;}
+#host_list li{width:25%; float:left;}
+
+
+#footer{border:10px solid #000; display:none;}

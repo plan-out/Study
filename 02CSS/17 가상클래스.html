@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17 가상클래스</title>
+  <style>
+    /*최상위요소를 나타내는 가상클래스*/
+    :root{
+      /*html태그를 뜻함.*/
+      font-size:20px;
+    }
+    
+    /*자식요소 가상클래스*/
+    li:first-child{color:red;}
+    li:last-child{color:blue;}
+    li:nth-child(2){color:green;}
+    li:nth-child(3n){color:yellow}
+    li:nth-child(3n+4){color:magenta;}
+    li:nth-child(odd){list-style:decimal;}
+    li:nth-child(even){list-style:upper-alpha;}
+  
+    /*마우스액션에 따른 가상클래스*/
+    li:hover{background:black;
+      color:white;}
+    li:active{padding:20px 10px;}
+  </style>
+</head>
+<body>
+  <h1>가상클래스(:) = 유사클래스</h1>
+  <p>:특정한 상황이나 상태에 따라 스타일의 대상을 지정하는
+    기술로, 실제 클래스가 없지만, 클래스가 부여된 것처럼
+    대상을 지정한다.</p>
+  <ul>
+    <li>01번째자식요소</li>
+    <li>02번째자식요소</li>
+    <li>03번째자식요소</li>
+    <li>04번째자식요소</li>
+    <li>05번째자식요소</li>
+    <li>06번째자식요소</li>
+    <li>07번째자식요소</li>
+    <li>08번째자식요소</li>
+    <li>09번째자식요소</li>
+    <li>10번째자식요소</li>
+    <li>11번째자식요소</li>
+    <li>12번째자식요소</li>
+    <li>13번째자식요소</li>
+    <li>14번째자식요소</li>
+    <li>15번째자식요소</li>
+    <li>16번째자식요소</li>
+    <li>17번째자식요소</li>
+    <li>18번째자식요소</li>
+    <li>19번째자식요소</li>
+    <li>20번째자식요소</li>
+  </ul>
+</body>
+</html>

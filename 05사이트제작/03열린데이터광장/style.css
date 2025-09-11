@@ -6,18 +6,27 @@ li{list-style:none;}
 img{vertical-align:top;}
 
 /*상단영역 스타일*/
-header{width:1200px; margin:0 auto;
-  border:10px solid #000;}
-header div{border:3px solid #f00;}  
-header #seoul{overflow:hidden;}
+header{width:1200px; margin:0 auto; overflow:hidden;}
+header #seoul{overflow:hidden;
+  border-bottom:1px solid #e4e9f0;}
 header #seoul h2{float:left; margin-right:75px;}
 header #seoul p{float:left;}
 header #seoul ul{float:right;}
 header #seoul li{float:left;}
+header #logo{float:left; margin:30px 0;}
+header #main_menu{float:left; margin-top:30px;
+  margin-left:170px;}
+header #main_menu li{float:left;}
+header #top_menu{float:right; margin-top:30px;}
+header #top_menu li{float:left;}
 
 
+main{width:1200px; margin:0 auto; height:3000px;
+  border:10px solid #000;}
+main section{outline:3px solid #f00;}
+main .container{padding:50px 0;
+  background:url("./images/bg.png") center 0/auto 100%;}
 
-main{border:10px solid #000; display:none;}
 
 
 /*하단영역 스타일*/

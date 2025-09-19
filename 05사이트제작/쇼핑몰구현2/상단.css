@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*리셋코드*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:top;}
+
+/*상단스타일*/
+header{min-width:976px; border:5px solid #000;}
+  /*min-width:최소로 작아지는 사이즈를 제한둠.*/
+header .inner{width:976px; margin:0 auto;
+  border:3px solid #00f;}
+header #logo{float:left; margin:45px 0 20px;}
+header #top_menu{float:right; margin-top:70px;}
+header #top_menu li{float:left; font-family:"Calibri";
+  font-size:11px; font-weight:bold;}
+/*가상요소(::) : 가상의 영역을 css로 생성*/
+header #top_menu li::after{content:"l"; padding:0 6px;
+  color:#d5d5d5;}  
+header #top_menu li a{color:#999;
+  text-decoration:none;}
+header #top_menu li:first-child a{color:#7eac9f;}
+header #top_menu li:last-child a{color:#ff838f;}  
+
+header #category{clear:both; overflow:hidden;}
+header #category li{float:left;}
